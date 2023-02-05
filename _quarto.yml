@@ -1,0 +1,73 @@
+project: 
+  type: website
+
+website:
+  page-navigation: true  
+  title: "Spring 2023 EAPS59100"
+  site-url: https://github.com/PurdueNWP/M1_SP2023
+  
+  repo-url: https://github.com/PurdueNWP/M1_SP2023
+  repo-actions: [edit, issue]
+  
+  page-footer: "Spring 2023 EAPS59100. Weather Simulation and Prediction with Cloud Computing" 
+ 
+  sidebar:
+    logo: https://user-images.githubusercontent.com/2915555/133525653-2a2278b1-1015-4350-b2a5-160d125aaaf7.png
+    pinned: true
+    align: center
+    tools: 
+      - icon: globe
+        href: https://nasa-openscapes.github.io
+        text: "NASA-Openscapes website"
+      - icon: github
+        href: https://github.com/PurdueNWP/M1_SP2023
+        text: "EAPS591 Cloud NWP repo"
+    
+    style: "docked"
+    search: true
+    collapse-level: 2
+    contents:
+      - section: "Welcome"
+        contents:
+          - index.md
+          - cloud-paradigm.md
+          - team.md
+      - section: "Week1"
+        contents:
+          - Week1/index.md
+          - Week1/prerequisites.md
+          - Week1/project.md
+      - section: "Week2"
+        contents: 
+          - Week2/index.md
+          - Week2/project.md
+      - section: "Week3"
+        contents: 
+          - Week3/index.md 
+          - Week3/project.md
+      - section: "Week4"
+        contents:
+          - Week4/index.md
+          - Week4/project.md
+      - section: "Week5"
+        contents:
+          - Week5/index.md
+          - Week5/project.md
+      - section: "Capstone"
+        contents:
+          - Capstone/index.md
+          - Capstone/project.md
+
+format:
+  html:
+    theme:
+      light: cosmo
+      dark: [cosmo, theme-dark.scss]
+    code-background: true
+    code-copy: true
+    css: styles.css
+    toc: true
+
+filters:
+  - include-files.lua
+  - quarto
