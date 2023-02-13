@@ -12,13 +12,13 @@ website:
   page-footer: "Spring 2023 EAPS59100. Weather Simulation and Prediction with Cloud Computing" 
  
   sidebar:
-    logo: https://user-images.githubusercontent.com/2915555/133525653-2a2278b1-1015-4350-b2a5-160d125aaaf7.png
+    logo: Banner.png
     pinned: true
     align: center
     tools: 
       - icon: globe
-        href: https://nasa-openscapes.github.io
-        text: "NASA-Openscapes website"
+        href: https://purdue.brightspace.com
+        text: "Purdue-Brightspaces website"
       - icon: github
         href: https://github.com/PurdueNWP/M1_SP2023
         text: "EAPS591 Cloud NWP repo"
