@@ -7,7 +7,7 @@ author: "Wen-wen Tung, Andrea Orton, Gillian Ferguson, Adithya Ganesh, and Lev G
 
 ## Welcome
 
-![](Banner.png)
+![](images/Banner.png)
 
 Welcome to **Weather Simulation and Prediction with Cloud Computing,** co-taught by Professors Andrea Orton and Wen-wen Tung.
 
