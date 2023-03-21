@@ -943,5 +943,75 @@
     "title": "Our Team",
     "section": "Teaching Assistant",
     "text": "Teaching Assistant\n\nGillian Ferguson"
+  },
+  {
+    "objectID": "Week1/Assignment1/Assignment1_Getting_Started_MetPy.html",
+    "href": "Week1/Assignment1/Assignment1_Getting_Started_MetPy.html",
+    "title": "Spring 2023 EAPS59100",
+    "section": "",
+    "text": "https://unidata.github.io/python-training/workshop/MetPy_Case_Study/metpy-case-study/\nRetrieve data from National Center for Environmental Information (NCEI, formerly NCDC) then plot with Python.\nThis is a tutorial on building a case study map for Dynamic Meteorology courses with use of Unidata tools, specifically MetPy and Siphon. In this tutorial we will cover accessing, calculating, and plotting model output.\nLet’s investigate The 2016 Blizzard, although it would easy to change which case you wanted (please feel free to do so).\nReanalysis Output: NARR 00 UTC 23 Jan 1996"
+  },
+  {
+    "objectID": "Week1/Login_Instructions/github_login.html",
+    "href": "Week1/Login_Instructions/github_login.html",
+    "title": "Spring 2023 EAPS59100",
+    "section": "",
+    "text": "Welcome to Weather Simulation and Prediction with Cloud Computing, co-taught by Professors Andrea Orton and Wen-wen Tung.\nThis course will take place virtually from Mar 27 to Apr 29, 2023. The main course site is at Purdue Brightspace, accessible to registered students."
+  },
+  {
+    "objectID": "Week1/Login_Instructions/github_login.html#about",
+    "href": "Week1/Login_Instructions/github_login.html#about",
+    "title": "Spring 2023 EAPS59100",
+    "section": "About",
+    "text": "About\nWho needs to know how to simulate or predict the weather?\nThink about the following:\n\nThe droughts affected food shortages that preceded the ‘Arab Spring’ in 2010–2011, while the 2011 Floods in Thailand crippled global computer supply chains for hard disc drives.\nThe August 2020 Midwest derecho as powerful as a major hurricane caused wide-scale utility disruptions and over $11 billions in damages. Weather impacts deliver various levels of complexity for decision-makers.\n\nIn the big picture, the weather and a changing climate widely affect the attainment of the 17 Sustainable Development Goals (SDGs) of United Nations’ 2030 Agenda for Sustainable Development that aims at a sustainable future for “people, planet and prosperity”.\nThis experiential-learning course teaches Numerical Weather Prediction (NWP), the science of predicting weather based on weather observations using mathematical models that describe atmospheric physical and dynamic processes. Students will learn to simulate and predict weather on high-performance computers and cloud computing services. Using historical severe weather cases, students will learn the processes of the atmosphere and physical Earth that are represented within NWP as well as the outcomes of these events that NWP can capture. The course’s capstone will be for students to synthesize the NWP technology with societal impacts relevant toward their field of study by re-enacting and analyzing a historical weather event.\nThe course learning outcomes are:\n\nExplain NWP and its components\nEffectively run a NWP model on supercomputer and cloud computational resources to produce forecasts\nArticulate real-world application by connecting the science with technology through an end of module project simulating a historical event and discussing the societal impacts"
+  },
+  {
+    "objectID": "Week1/Login_Instructions/github_login.html#what-to-expect",
+    "href": "Week1/Login_Instructions/github_login.html#what-to-expect",
+    "title": "Spring 2023 EAPS59100",
+    "section": "What to expect",
+    "text": "What to expect\n\nDuring the course, the participants will have access to cloud environments in NSF Access Anvil through an OnDemand interface, provided through Purdue Rosen Center for Advanced Computing.\nParticipants will be guided on how to log into the cloud environment, import needed data recipes and resources, and will have the opportunity to explore and develop science and applications workflows in a cloud environment (hosted in Anvil) using example tutorials as building blocks.\nThe examples and assignments use publicly available data and resources. Participants will strengthen their practice of open science using open source code.\nReproducibility.\n\nIn the two to three weeks leading up to the course, participants are encouraged to review background resources that will facilitate a more effective learning experience.\nThe following datasets are currently available:"
+  },
+  {
+    "objectID": "Week1/Login_Instructions/github_login.html#code-of-conduct",
+    "href": "Week1/Login_Instructions/github_login.html#code-of-conduct",
+    "title": "Spring 2023 EAPS59100",
+    "section": "Code of Conduct",
+    "text": "Code of Conduct\nThe course is a safe learning space and all participants are required to abide by our Code of Conduct."
+  },
+  {
+    "objectID": "Week1/Login_Instructions/github_login.html#acknowledgements",
+    "href": "Week1/Login_Instructions/github_login.html#acknowledgements",
+    "title": "Spring 2023 EAPS59100",
+    "section": "Acknowledgements",
+    "text": "Acknowledgements\nWe thank all of the additional RCAC staff that have have joined as helpers.\nThis hackathon book is made with quarto. See the earthdata-cloud-cookbook to learn more about how we work and contributing."
+  },
+  {
+    "objectID": "Week1/Assignment1/Assignment1_Getting_Started_MetPy.html#case-study-data",
+    "href": "Week1/Assignment1/Assignment1_Getting_Started_MetPy.html#case-study-data",
+    "title": "Spring 2023 EAPS59100",
+    "section": "1 Case Study Data",
+    "text": "1 Case Study Data\nThere are a number of different sites that you can utilize to access past model output analyses and even forecasts. The most robust collection is housed at the National Center for Environmental Information (NCEI, formerly NCDC) on a THREDDS server. The general website to begin your search is\nhttps://www.ncdc.noaa.gov/data-access\nthis link contains links to many different data sources (some of which we will come back to later in this tutorial). But for now, lets investigate what model output is available\nhttps://www.ncei.noaa.gov/products/weather-climate-models"
+  },
+  {
+    "objectID": "Week1/Assignment1/Assignment1_Getting_Started_MetPy.html#retrieve-narr-data-from-national-centers-for-environmental-information",
+    "href": "Week1/Assignment1/Assignment1_Getting_Started_MetPy.html#retrieve-narr-data-from-national-centers-for-environmental-information",
+    "title": "Spring 2023 EAPS59100",
+    "section": "2 Retrieve NARR data from National Centers for Environmental Information",
+    "text": "2 Retrieve NARR data from National Centers for Environmental Information\nNorth American Regional Reanalysis (NARR) NARR is a regional reanalysis of North America containing temperatures, winds, moisture, soil data, and dozens of other parameters at 32km horizontal resolution.\nLets investigate what specific NARR output is available to work with from National Centers for Environmental Information (NCEI).\nhttps://www.ncei.noaa.gov/products/weather-climate-models/north-american-regional\nWe specifically want to look for data that has “TDS” data access, since that is short for a THREDDS server data access point. Let’s go ahead and use the NARR Analysis data to investigate the past case (The 1996 Blizzard) we identified:\nhttps://www.ncei.noaa.gov/thredds/catalog/model-narr-a-files/199601/19960123/catalog.html?dataset=model-narr-a-files/199601/19960123/narr-a_221_19960123_0000_000.grb\nAnd we will use a Unidata python package called Siphon to read this data through the THREDDS data server NetCDF Subset Service link:\nhttps://www.ncei.noaa.gov/thredds/ncss/model-narr-a-files/199601/19960123/narr-a_221_19960123_0000_000.grb/dataset.html\n\n\nCode\n# Case Study Date\nyear = 1996\nmonth = 1\nday = 24\nhour = 0\n\ndt = datetime(year, month, day, hour)\n\n\nThe following code chunk automate the spatial, temporal, and variable subsetting operation on the THREDDS data server for the 00 UTC, Jan 23, 2016 NARR data. The data is output into the Network Common Data Form (NetCDF) format, a standard for sharing scientific data in the weather and climate community.\n\n\nCode\n# Read NARR Data from THREDDS server\nbase_url = 'https://www.ncei.noaa.gov/thredds/catalog/model-narr-a-files/'\n\n# Programmatically generate the URL to the day of data we want\ncat = TDSCatalog(f'{base_url}{dt:%Y%m}/{dt:%Y%m%d}/catalog.xml')\n\n# Have Siphon find the appropriate dataset\nds = cat.datasets.filter_time_nearest(dt)\n\n# Interface with the data through the NetCDF Subset Service (NCSS)\nncss = ds.subset()\n\n# Create an NCSS query with our desired specifications\nquery = ncss.query()\nquery.lonlat_box(north=60, south=18, east=300, west=225)\nquery.all_times()\nquery.add_lonlat()\nquery.accept('netcdf')\nquery.variables('Temperature_surface')\n\n# Use the query to obtain our NetCDF data\ndata = ncss.get_data(query)\n\n\nIf the internet connection is too slow or if the NCEI THREDDS data server is down, we keep a copy of the subset NetCDF file locally on Anvil for you to use.\n\n\nCode\n# In case of bad internet connection.\n# Uncomment the following line to read local netCDF file \n#  of the NARR data by removing the # sign leading the line.\n# data = Dataset('../../../DATA/Week1/NARR_19960123_0000.nc','r')\n\n\nLet’s see what dimensions are in the file:\n\n\nCode\ndata.dimensions\n\n\n{'time': <class 'netCDF4._netCDF4.Dimension'>: name = 'time', size = 1,\n 'y': <class 'netCDF4._netCDF4.Dimension'>: name = 'y', size = 119,\n 'x': <class 'netCDF4._netCDF4.Dimension'>: name = 'x', size = 268}"
+  },
+  {
+    "objectID": "Week1/Assignment1/Assignment1_Getting_Started_MetPy.html#pulling-data-for-plotting",
+    "href": "Week1/Assignment1/Assignment1_Getting_Started_MetPy.html#pulling-data-for-plotting",
+    "title": "Spring 2023 EAPS59100",
+    "section": "3 Pulling Data for Plotting",
+    "text": "3 Pulling Data for Plotting\nThe object that we get from Siphon is NetCDF-like, so we can pull data using familiar calls for all of the variables that are desired for calculations and plotting purposes.\nNOTE: Due to the curvilinear nature of the NARR grid, there is a need to smooth the data that we import for calculation and plotting purposes.\nAdditionally, we want to attach units to our values for use in MetPy calculations later and it will also allow for easy conversion to other units.\n\n<b>EXERCISE</b>:\nReplace the 0's in the template below with your code:\n <ul>\n  <li>Use the gaussian_filter function to smooth the Temperature_isobaric, Geopotential_height_isobaric, u-component_of_wind_isobaric, and v-component_of_wind_isobaric variables from the netCDF object with a sigma value of 1.</li>\n<li>Assign the units of kelvin, meter, m/s, and m/s resectively.</li>\n<li>Extract the lat, lon, and isobaric1 variables.</li>\n</ul>\n\n\n\nCode\n# Extract data and assign units\n# tmpk = data.variables['Temperature_surface'][0]* units.K\ntmpk = gaussian_filter(data.variables['Temperature_surface'][0],\n                       sigma=1.0) * units.K\n# Extract coordinate data for plotting\nlat = data.variables['lat'][:]\nlon = data.variables['lon'][:]\nlev = 0\n\n\nNext we need to extract the time variable. It’s not in very useful units, but the num2date function can be used to easily create regular datetime objects.\n\n\nCode\ntime = data.variables['time']\nprint(time.units)\nvtime = num2date(time[0], units=time.units)\nprint(vtime)\n\n\nHour since 1996-01-24T00:00:00Z\n1996-01-24 00:00:00\n\n\nFinally, we need to calculate the spacing of the grid in distance units instead of degrees using the MetPy helper function lat_lon_grid_spacing.\n\n\nCode\n# Calcualte dx and dy for calculations\ndx, dy = mpcalc.lat_lon_grid_deltas(lon, lat)"
+  },
+  {
+    "objectID": "Week1/Assignment1/Assignment1_Getting_Started_MetPy.html#maps-and-projections",
+    "href": "Week1/Assignment1/Assignment1_Getting_Started_MetPy.html#maps-and-projections",
+    "title": "Spring 2023 EAPS59100",
+    "section": "4 Maps and Projections",
+    "text": "4 Maps and Projections\n\n\nCode\n# Data projection; NARR Data is Earth Relative\ndataproj = ccrs.PlateCarree()\n\n# Plot projection\n# The look you want for the view, Lambert Conformal for mid-latitude view\nplotproj = ccrs.LambertConformal(central_longitude=-100., central_latitude=40.,\n                                 standard_parallels=[30, 60])\n\n\n\n\nCode\ndef create_map_background():\n    fig=plt.figure(figsize=(14, 12))\n    ax=plt.subplot(111, projection=plotproj)\n    ax.set_extent([-125, -73, 25, 50],ccrs.PlateCarree())\n    ax.coastlines('50m', linewidth=0.75)\n    ax.add_feature(cfeature.STATES, linewidth=0.5)\n    return fig, ax\n\n\n\n\nCode\nfig, ax = create_map_background()\n\n# Contour 1 - Temperature, dotted\ncs2 = ax.contour(lon, lat, tmpk.to('degC'), range(-50, 50, 5),\n                 colors='grey', linestyles='dotted', transform=dataproj)\n\nplt.clabel(cs2, fontsize=10, inline=1, inline_spacing=10, fmt='%i',\n           rightside_up=True, use_clabeltext=True)\n\n# Filled contours - Temperature advection\ncontours = [-25, -20, -15, -10, -5, 0, 5, 10, 15, 20, 25]\ncf = ax.contourf(lon, lat, tmpk.to('degC'), contours,\n                 cmap='bwr', extend='both', transform=dataproj)\nplt.colorbar(cf, orientation='horizontal', pad=0, aspect=50,\n             extendrect=True, ticks=contours)\n\n# Titles\nplt.title('Surface Temperature', loc='left')\nplt.title(f'VALID: {vtime}', loc='right')\n\nplt.show()"
   }
 ]
