@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Prof.&nbsp;Tung, “Quarto novice please don’t change this YAML block”">
+<meta name="author" content="Prof.&nbsp;Tung and “Your Name”">
 
 <title>Spring 2023 EAPS59100 – assignment1_getting_started_metpy</title>
 <style>
@@ -335,6 +335,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 
 
+<p>Forewords:</p>
+<p>This file was created as a <a href="https://quarto.org/">Quarto</a> document. The first block seen above is the YAML, a human-readable data-serialization language. It is commonly used to add <em>metadata</em>, such as title and descriptions, to Markdown documents. For Quarto specifically, it can include the “engine” to render the document, such as <em>Jupyter: python</em> in this example.</p>
 <p>https://unidata.github.io/python-training/workshop/MetPy_Case_Study/metpy-case-study/</p>
 <p>Retrieve data from National Center for Environmental Information (NCEI, formerly NCDC) then plot with Python.</p>
 <p>This is a tutorial on building a case study map for Dynamic Meteorology courses with use of Unidata tools, specifically <a href="https://unidata.github.io/MetPy/latest/">MetPy</a> and <a href="https://unidata.github.io/siphon/latest/">Siphon</a>. In this tutorial we will cover accessing, calculating, and plotting model output.</p>
@@ -389,7 +391,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Case Study Date</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>year <span class="op">=</span> <span class="dv">1996</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>month <span class="op">=</span> <span class="dv">1</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>day <span class="op">=</span> <span class="dv">24</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>day <span class="op">=</span> <span class="dv">23</span></span>
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>hour <span class="op">=</span> <span class="dv">0</span></span>
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>dt <span class="op">=</span> datetime(year, month, day, hour)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -439,8 +441,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>data.dimensions</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-display" data-execution_count="27">
-<pre><code>{'time': &lt;class 'netCDF4._netCDF4.Dimension'&gt;: name = 'time', size = 1,
+<div class="cell-output cell-output-display" data-execution_count="5">
+<pre><code>{'time2': &lt;class 'netCDF4._netCDF4.Dimension'&gt;: name = 'time2', size = 1,
  'y': &lt;class 'netCDF4._netCDF4.Dimension'&gt;: name = 'y', size = 119,
  'x': &lt;class 'netCDF4._netCDF4.Dimension'&gt;: name = 'x', size = 268}</code></pre>
 </div>
@@ -477,14 +479,14 @@ Replace the 0's in the template below with your code:
 <div class="cell" data-execution_count="7">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>time <span class="op">=</span> data.variables[<span class="st">'time'</span>]</span>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>time <span class="op">=</span> data.variables[<span class="st">'time2'</span>]</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(time.units)</span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>vtime <span class="op">=</span> num2date(time[<span class="dv">0</span>], units<span class="op">=</span>time.units)</span>
 <span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(vtime)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>Hour since 1996-01-24T00:00:00Z
-1996-01-24 00:00:00</code></pre>
+<pre><code>Hour since 1996-01-23T00:00:00Z
+1996-01-23 00:00:00</code></pre>
 </div>
 </div>
 <p>Finally, we need to calculate the spacing of the grid in distance units instead of degrees using the MetPy helper function <code>lat_lon_grid_spacing</code>.</p>
@@ -528,21 +530,21 @@ Replace the 0's in the template below with your code:
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> create_map_background()</span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Contour 1 - Temperature, dotted</span></span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>cs2 <span class="op">=</span> ax.contour(lon, lat, tmpk.to(<span class="st">'degC'</span>), <span class="bu">range</span>(<span class="op">-</span><span class="dv">50</span>, <span class="dv">50</span>, <span class="dv">5</span>),</span>
-<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>                 colors<span class="op">=</span><span class="st">'grey'</span>, linestyles<span class="op">=</span><span class="st">'dotted'</span>, transform<span class="op">=</span>dataproj)</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="co">#cs2 = ax.contour(lon, lat, tmpk.to('degC'), range(-50, 50, 5),</span></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="co">#                 colors='grey', linestyles='dotted', transform=dataproj)</span></span>
 <span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>plt.clabel(cs2, fontsize<span class="op">=</span><span class="dv">10</span>, inline<span class="op">=</span><span class="dv">1</span>, inline_spacing<span class="op">=</span><span class="dv">10</span>, fmt<span class="op">=</span><span class="st">'</span><span class="sc">%i</span><span class="st">'</span>,</span>
-<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>           rightside_up<span class="op">=</span><span class="va">True</span>, use_clabeltext<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a><span class="co">#plt.clabel(cs2, fontsize=10, inline=1, inline_spacing=10, fmt='%i',</span></span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a><span class="co">#           rightside_up=True, use_clabeltext=True)</span></span>
 <span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Filled contours - Temperature advection</span></span>
-<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a>contours <span class="op">=</span> [<span class="op">-</span><span class="dv">25</span>, <span class="op">-</span><span class="dv">20</span>, <span class="op">-</span><span class="dv">15</span>, <span class="op">-</span><span class="dv">10</span>, <span class="op">-</span><span class="dv">5</span>, <span class="dv">0</span>, <span class="dv">5</span>, <span class="dv">10</span>, <span class="dv">15</span>, <span class="dv">20</span>, <span class="dv">25</span>]</span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a>contours <span class="op">=</span> <span class="bu">range</span>(<span class="op">-</span><span class="dv">25</span>, <span class="dv">25</span>, <span class="dv">5</span>) <span class="co">#[-30, -25, -20, -15, -10, -5, 0, 5, 10, 15, 20, 25, 30]</span></span>
 <span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>cf <span class="op">=</span> ax.contourf(lon, lat, tmpk.to(<span class="st">'degC'</span>), contours,</span>
 <span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a>                 cmap<span class="op">=</span><span class="st">'bwr'</span>, extend<span class="op">=</span><span class="st">'both'</span>, transform<span class="op">=</span>dataproj)</span>
 <span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a>plt.colorbar(cf, orientation<span class="op">=</span><span class="st">'horizontal'</span>, pad<span class="op">=</span><span class="dv">0</span>, aspect<span class="op">=</span><span class="dv">50</span>,</span>
 <span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a>             extendrect<span class="op">=</span><span class="va">True</span>, ticks<span class="op">=</span>contours)</span>
 <span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Titles</span></span>
-<span id="cb14-18"><a href="#cb14-18" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Surface Temperature'</span>, loc<span class="op">=</span><span class="st">'left'</span>)</span>
+<span id="cb14-18"><a href="#cb14-18" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Surface Temperature degC'</span>, loc<span class="op">=</span><span class="st">'left'</span>)</span>
 <span id="cb14-19"><a href="#cb14-19" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="ss">f'VALID: </span><span class="sc">{</span>vtime<span class="sc">}</span><span class="ss">'</span>, loc<span class="op">=</span><span class="st">'right'</span>)</span>
 <span id="cb14-20"><a href="#cb14-20" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb14-21"><a href="#cb14-21" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>

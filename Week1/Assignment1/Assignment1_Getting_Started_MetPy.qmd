@@ -11,15 +11,32 @@ format:
     code-fold: true
 ---
 
-Forewords:
+## Assignment 1: Getting your Cloud Computing tools together
 
-This file was created as a [Quarto](https://quarto.org/) document. The first block seen above is the YAML, a human-readable data-serialization language. It is commonly used to add *metadata*, such as title and descriptions, to Markdown documents. For Quarto specifically, it can include the "engine" to render the document, such as *Jupyter: python* in this example.
+### Introduction:
 
+This file was created as a [Quarto](https://quarto.org/) document. The
+first block seen above is the YAML, a human-readable data-serialization
+language. It is commonly used to add *metadata*, such as title and
+descriptions, to Markdown documents. For Quarto specifically, it can
+include the "engine" to render the document, such as *Jupyter: python*
+in this example.
+
+#### References:
 
 https://unidata.github.io/python-training/workshop/MetPy_Case_Study/metpy-case-study/
 
-Retrieve data from National Center for Environmental Information (NCEI,
-formerly NCDC) then plot with Python.
+#### In this exercise:
+
+-   create a Github account
+
+-   clone the class Github directory to your Anvil home directory (make
+    sure you have signed up for an Anvil account)
+
+-   Setup your Anvil work environment
+
+-   Retrieve data from National Center for Environmental Information
+    (NCEI, formerly NCDC) then plot with Python.
 
 This is a tutorial on building a case study map for Dynamic Meteorology
 courses with use of Unidata tools, specifically
@@ -27,10 +44,16 @@ courses with use of Unidata tools, specifically
 [Siphon](https://unidata.github.io/siphon/latest/). In this tutorial we
 will cover accessing, calculating, and plotting model output.
 
-Let's investigate The 2016 Blizzard, although it would easy to change
-which case you wanted (please feel free to do so).
+-   Read from netCDF format file
 
-Reanalysis Output: NARR 00 UTC 23 Jan 1996
+-   Plot surface temperature using Jupyter notebook
+
+Let's investigate The 1996 and 2016 Blizzards, although it would be easy
+to change which case you wanted (please feel free to do so).
+
+Reanalysis Output: NARR 00 UTC 23 Jan 1996 and NARR 00 UTC 23 Jan 2016
+
+- Output your report into a professional document using Quarto
 
 ### Data from Reanalysis on pressure surfaces:
 
@@ -70,7 +93,6 @@ investigate what model output is available
 
 https://www.ncei.noaa.gov/products/weather-climate-models
 
-
 ## Retrieve NARR data from National Centers for Environmental Information
 
 *North American Regional Reanalysis (NARR)* NARR is a regional
@@ -82,32 +104,37 @@ from National Centers for Environmental Information (NCEI).
 
 https://www.ncei.noaa.gov/products/weather-climate-models/north-american-regional
 
-
 We specifically want to look for data that has "TDS" data access, since
-that is short for a *THREDDS* server data access point. Let's go ahead and use the NARR Analysis data to investigate the past case (The 1996 Blizzard) we identified:
+that is short for a *THREDDS* server data access point. Let's go ahead
+and use the NARR Analysis data to investigate the past case (The 1996
+Blizzard) we identified:
 
-[https://www.ncei.noaa.gov/thredds/catalog/model-narr-a-files/199601/19960123/catalog.html?dataset=model-narr-a-files/199601/19960123/narr-a_221_19960123_0000_000.grb](https://www.ncei.noaa.gov/thredds/catalog/model-narr-a-files/199601/19960123/catalog.html?dataset=model-narr-a-files/199601/19960123/narr-a_221_19960123_0000_000.grb)
+<https://www.ncei.noaa.gov/thredds/catalog/model-narr-a-files/199601/19960123/catalog.html?dataset=model-narr-a-files/199601/19960123/narr-a_221_19960123_0000_000.grb>
 
 And we will use a Unidata python package called
 [Siphon](https://unidata.github.io/siphon/latest/) to read this data
-through the 
-THREDDS data server NetCDF Subset Service link:
+through the THREDDS data server NetCDF Subset Service link:
 
-[https://www.ncei.noaa.gov/thredds/ncss/model-narr-a-files/199601/19960123/narr-a_221_19960123_0000_000.grb/dataset.html](https://www.ncei.noaa.gov/thredds/ncss/model-narr-a-files/199601/19960123/narr-a_221_19960123_0000_000.grb/dataset.html)
-
-
+<https://www.ncei.noaa.gov/thredds/ncss/model-narr-a-files/199601/19960123/narr-a_221_19960123_0000_000.grb/dataset.html>
 
 ```{python}
 # Case Study Date
 year = 1996
 month = 1
-day = 24
+day = 23
 hour = 0
 
 dt = datetime(year, month, day, hour)
 ```
 
-The following code chunk automate the spatial, temporal, and variable subsetting operation on the THREDDS data server for the [00 UTC, Jan 23, 2016 NARR data](https://www.ncei.noaa.gov/thredds/ncss/model-narr-a-files/199601/19960123/narr-a_221_19960123_0000_000.grb/dataset.html). The data is output into the Network Common Data Form ([NetCDF](https://www.unidata.ucar.edu/software/netcdf/)) format, a standard for sharing scientific data in the weather and climate community.
+The following code chunk automate the spatial, temporal, and variable
+subsetting operation on the THREDDS data server for the [00 UTC, Jan 23,
+2016 NARR
+data](https://www.ncei.noaa.gov/thredds/ncss/model-narr-a-files/199601/19960123/narr-a_221_19960123_0000_000.grb/dataset.html).
+The data is output into the Network Common Data Form
+([NetCDF](https://www.unidata.ucar.edu/software/netcdf/)) format, a
+standard for sharing scientific data in the weather and climate
+community.
 
 ```{python}
 # Read NARR Data from THREDDS server
@@ -134,7 +161,9 @@ query.variables('Temperature_surface')
 data = ncss.get_data(query)
 ```
 
-If the internet connection is too slow or if the NCEI THREDDS data server is down, we keep a copy of the subset NetCDF file locally on Anvil for you to use.
+If the internet connection is too slow or if the NCEI THREDDS data
+server is down, we keep a copy of the subset NetCDF file locally on
+Anvil for you to use.
 
 ```{python}
 # In case of bad internet connection.
@@ -189,7 +218,7 @@ units, but the `num2date` function can be used to easily create regular
 datetime objects.
 
 ```{python}
-time = data.variables['time']
+time = data.variables['time2']
 print(time.units)
 vtime = num2date(time[0], units=time.units)
 print(vtime)
@@ -226,7 +255,6 @@ def create_map_background():
     return fig, ax
 ```
 
-
 ```{python}
 fig, ax = create_map_background()
 
@@ -238,16 +266,15 @@ plt.clabel(cs2, fontsize=10, inline=1, inline_spacing=10, fmt='%i',
            rightside_up=True, use_clabeltext=True)
 
 # Filled contours - Temperature advection
-contours = [-25, -20, -15, -10, -5, 0, 5, 10, 15, 20, 25]
+contours = range(-25, 25, 5) #[-30, -25, -20, -15, -10, -5, 0, 5, 10, 15, 20, 25, 30]
 cf = ax.contourf(lon, lat, tmpk.to('degC'), contours,
                  cmap='bwr', extend='both', transform=dataproj)
 plt.colorbar(cf, orientation='horizontal', pad=0, aspect=50,
              extendrect=True, ticks=contours)
 
 # Titles
-plt.title('Surface Temperature', loc='left')
+plt.title('Surface Temperature degC', loc='left')
 plt.title(f'VALID: {vtime}', loc='right')
 
 plt.show()
 ```
-
