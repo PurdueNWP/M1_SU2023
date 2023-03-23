@@ -35,7 +35,6 @@ website:
       - section: "Week1"
         contents:
           - Week1/index.md
-          - Week1/prerequisites.md
           - Week1/project.md
       - section: "Week2"
         contents: 
