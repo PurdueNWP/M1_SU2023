@@ -26,7 +26,7 @@ cp ~/M1_SP2023/Week1/Assignment1_Getting_Started.ipynb ~/NWP1/Week1/
      -  Use **4** under Cores. 
      -  Click to select **Use Jupyter Lab instead of Jupyter Notebook**
      -  Launch the Jupyter Lab.
- -  Open the Jupyter Notebook, write your name as an author, then run the code chunk by chunk.
+ -  Open the Jupyter Notebook `~/NWP1/Week1/Assignment1_Getting_Started.ipynb`, write your name as an author, then run the code chunk by chunk.
  -  Answer the last question.
  -  Once done, convert the Jupyter Notebook into a pdf document using the command in the **\>\_Anvil Shell Access**
  ```
