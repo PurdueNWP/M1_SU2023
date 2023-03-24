@@ -2,7 +2,7 @@
 title: "Spring 2023 EAPS59100"
 subtitle: "Weather Simulation and Prediction with Cloud Computing"
  
-author: "Wen-wen Tung, Andrea Orton, Gillian Ferguson, Adithya Ganesh, and Lev Gorenstein"
+authors: "Wen-wen Tung, Andrea Orton, Gillian Ferguson, Adithya Ganesh, and Lev Gorenstein"
 ---
 
 ## Welcome

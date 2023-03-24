@@ -1,0 +1,190 @@
+---
+jupyter: python3
+author: Wen-wen Tung and YOUR NAME
+editor: 
+  markdown: 
+    wrap: 72
+format:
+  html:
+    toc: true
+    number-sections: false
+    code-fold: true
+    embed-resources: true
+---
+
+# Assignment 1: Getting Started with Anvil and Github
+
+## 1. Introduction:
+
+In this assignment, you will use Jupyter Notebook to execute python commands that load and visualize the surface temperature data of the Jan 2016 Blizzard. Then, you will use Quarto to create a polished report for submission.  
+
+This file was originally created as a [Quarto](https://quarto.org/) Markdown document. The first block seen above is called the YAML, a human-readable data-serialization
+language. It is commonly used to add **metadata**, such as title and
+descriptions, to Markdown documents. For Quarto specifically, it can
+include the method to render the document, such as the Jupyter engine specified with **Jupyter: python** in the YAML.
+
+
+In this exercise, you will learn to perform the following tasks:
+
+ - Download data from directly from NOAA Physical Sciences Laboratory, subsetting the data to the specified time and the spatial domain in the process
+ - Plot the surface temperature using filled contours over a map
+
+The weather event under investigation is the January 2016 Blizzard, although the tasks are generic and it would be easy to change to other events. 
+
+#### References:
+
+- Description of the Jan 2016 Blizzard in the Course Brightspace Site, Week 1 Learning Materials
+- Unidata MetPy tutorial: https://unidata.github.io/python-training/workshop/MetPy_Case_Study/metpy-case-study/
+
+
+## 2. Load Python packages
+
+Make sure you have started the **Python (My MetPy Kernel)** in the upper right corner of the Jupyter Notebook. This kernel gives you access to a Python module built with necessary packages to run this exercise. You should not install packages on your own. 
+
+```{python}
+from datetime import datetime
+
+import cartopy.crs as ccrs
+import cartopy.feature as cfeature
+import matplotlib.pyplot as plt
+
+#from metpy.plots import StationPlot
+from metpy.units import units
+from netCDF4 import Dataset, num2date
+from scipy.ndimage import gaussian_filter
+```
+
+## 3. Case Study Data
+
+*North American Regional Reanalysis (NARR)* is a high resolution combined model and assimilated dataset produced by the National Centers for Environmental Prediction (NCEP). From 1979 to near present 8-times daily, daily and monthly data is output on a Northern Hemisphere Lambert Conformal Conic grid. It is a regional reanalysis of North America containing temperatures, winds, moisture,
+soil data, and dozens of other parameters at 32km horizontal resolution.
+
+Let's investigate what specific NARR output is available to work with
+from NOAA Physical Sciences Laboratory: [https://psl.noaa.gov/data/gridded/data.narr.html](https://psl.noaa.gov/data/gridded/data.narr.html)
+
+We specifically want to download the data using the *THREDDS Catalog* option, such as in [https://psl.noaa.gov/thredds/catalog/Datasets/NARR/monolevel/catalog.html](https://psl.noaa.gov/thredds/catalog/Datasets/NARR/monolevel/catalog.html). The 2016 surface temperature data are available for manual subsetting through the THREDDS data server NetCDF Subset Service [https://psl.noaa.gov/thredds/ncss/grid/Datasets/NARR/monolevel/air.sfc.2016.nc/dataset.html](https://psl.noaa.gov/thredds/ncss/grid/Datasets/NARR/monolevel/air.sfc.2016.nc/dataset.html).
+
+We subset the **3-hourly air temperature at Surface** data in **Latitude** and **Longitude** to the North American domain bounded by **North=60, South=18, East=300, and West=225** degrees at a single time **2016-01-23T12:00:00Z**. The data is output into the Network Common Data Form ([NetCDF](https://www.unidata.ucar.edu/software/netcdf/)) format, a
+standard for sharing scientific data in the weather and climate
+community. Specifically, choose the **netcdf4-classic* format. Leave the Vertical Subset and CF Compliance options blank. The resulted NCSS Request URL is:
+
+https://psl.noaa.gov/thredds/ncss/grid/Datasets/NARR/monolevel/air.sfc.2016.nc?var=air&var=lat&var=lon&north=60&west=225&east=300&south=18&horizStride=1&time=2016-01-23T12:00:00Z&&accept=netcdf4-classic
+
+Submit this request, then a dataset named `air.sfc.2016.nc.nc4` will be downloaded to your personal computer. For your convenience, the same data is stored in Anvil for you to use. We use the `Dataset` function in the python `netCDF4` package to read this file.
+
+```{python}
+data = Dataset('/anvil/projects/nwp/depot/DATA/Week1/air.sfc.2016.nc.nc4', 'r')
+```
+
+Let's see what dimensions are in the file:
+
+```{python}
+data.dimensions
+```
+The variable name of the surface Temperature is `air`. We could display some information about `air` stored in the file. Here, we see that the unit of the `air` values is degree K, hence their valid range is between 180K and 365K.
+
+```{python}
+print(data['air'])
+```
+
+## 4. Plotting data
+
+Due to the curvilinear nature of the NARR grid, there is a need to smooth the data that we imported for calculation and plotting purposes. Additionally, we want to attach units to our values for use in MetPy calculations later and it will also allow for easy conversion to other units. 
+
+### Data Preparation
+
+In the following code, we use the gaussian_filter function to smooth the `air` from the netCDF file with a sigma value of 1. Then, we assign the units of kelvin to the temperature. Lastly, we extract the `lat` and `lon` variables from the file. `lev` is set to zero for surface values.
+
+```{python}
+# Extract data and assign units
+tmpk = gaussian_filter(data.variables['air'][0],
+                       sigma=1.0) * units.K
+# Extract coordinate data for plotting
+lat = data.variables['lat'][:]
+lon = data.variables['lon'][:]
+lev = 0
+```
+
+Next we need to extract the time variable. It's not in very useful
+units, but the `num2date` function can be used to easily create regular
+datetime objects.
+
+```{python}
+time = data.variables['time']
+print(time.units)
+vtime = num2date(time[0], units=time.units)
+print(vtime)
+```
+
+### Maps and Projections
+
+```{python}
+# Data projection; NARR Data is Earth Relative
+dataproj = ccrs.PlateCarree()
+
+# Plot projection
+# The look you want for the view, Lambert Conformal for mid-latitude view
+plotproj = ccrs.LambertConformal(central_longitude=-100., central_latitude=40.,
+                                 standard_parallels=[30, 60])
+```
+
+```{python}
+def create_map_background():
+    fig=plt.figure(figsize=(14, 12))
+    ax=plt.subplot(111, projection=plotproj)
+    ax.set_extent([-125, -73, 25, 50],ccrs.PlateCarree())
+    ax.coastlines('50m', linewidth=0.75)
+    ax.add_feature(cfeature.STATES, linewidth=0.5)
+    return fig, ax
+```
+
+### Plotting
+
+```{python}
+fig, ax = create_map_background()
+
+# Contour 1 - Temperature, dotted
+cs2 = ax.contour(lon, lat, tmpk.to('degC'), range(-50, 50, 5),
+                 colors='grey', linestyles='dotted', transform=dataproj)
+
+plt.clabel(cs2, fontsize=10, inline=1, inline_spacing=10, fmt='%i',
+           rightside_up=True, use_clabeltext=True)
+
+# Filled contours - Temperature advection
+contours = range(-25, 25, 5) 
+# Try change contours such as [-20, -15, -10, -5, -3 -1 0, 5, 10, 15, 20]
+cf = ax.contourf(lon, lat, tmpk.to('degC'), contours,
+                 cmap='bwr', extend='both', transform=dataproj)
+plt.colorbar(cf, orientation='horizontal', pad=0, aspect=50,
+             extendrect=True, ticks=contours)
+
+# Titles
+plt.title('Surface Temperature degC', loc='left')
+plt.title(f'VALID: {vtime}', loc='right')
+
+plt.show()
+```
+
+## 5. Question
+
+
+[![Jan 2016 Blizzard](https://upload.wikimedia.org/wikipedia/commons/2/26/Noaa-forecast-20160122.gif)](National Weather Service 24. hour forecast for blizzard in the eastern United States, for January 22-23, 2016)
+
+Compare the surface temperature observation at 12UTC, Jan 23, 2016 against the prediction of precipitation (green=rain, blue=snow, orange=ice, purple=mixed type) from National Weather Service above.
+Do you think the prediction performed reasonably well in distinguishing the rain and snow apart and why? Please type your answer directly below.
+
+(Your Answer Here)
+
+
+
+
+
+
+## 6. Create a pdf document of this Notebook
+
+Save your changes to the file. Then, go to Anvil Ondemand, type in **\>\_Anvil Shell Access**:
+ ```
+ cd ~/NWP1/Week1
+ quarto render Assignment1_Getting_Started.ipynb --execute --to pdf
+ ```
+A pdf file, `Assignment1_Getting_Started.pdf` will be created for you to submit to the Brightspace portal.

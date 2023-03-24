@@ -30,8 +30,6 @@ website:
       - section: "Welcome"
         contents:
           - index.md
-          - cloud-paradigm.md
-          - team.md
       - section: "Week1"
         contents:
           - Week1/index.md
