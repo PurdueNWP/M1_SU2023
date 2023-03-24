@@ -1,14 +1,12 @@
 ---
-title: Assignment 1 Getting Started with Anvil and Github
+title: Assignment 1 Getting Started with Anvil and GitHub
 
 author: "Wen-wen Tung"
 ---
 
 ## 1. Introduction
 
-In this assignment, we will use Jupyter Notebook to execute python commands to visualize the surface temperature of the Jan 2016 Blizzard. Then, we will use Quarto to generate a polished report. A Jupyter Notebook is available in `~/M1_SP2023/Week1`, named `Assignment1_Getting_Started.ipynb`. Please follow this video to complete the exercise and upload your report to the Brightspace.
-
- - [![Prof. Tung Video Demo of Assignment 1](http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](http://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE "Video Title")
+In this assignment, we will use Jupyter Notebook to execute python commands to visualize the surface temperature of the Jan 2016 Blizzard. Then, we will use Quarto to generate a polished report. A Jupyter Notebook is available in `~/M1_SP2023/Week1`, named [`Assignment1_Getting_Started.ipynb`](Assignment1_Getting_Started.ipynb). 
  
 ---
 
