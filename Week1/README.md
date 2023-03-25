@@ -8,25 +8,27 @@ In this class, we use the GitHub to store weekly computing project files for use
 
 ## 1. How to *clone* this GitHub repository to Anvil
 
-You could have all of the files in this GitHub repository copied into the home directory of your Anvil account. This provides tremendous convenience for your computing. We will update the GitHub contents weekly, and will ask you to reset the copy in your Anvil account to the new contents.
+The process of copying all of the files in a GitHub repository to a user's computer, in our case the Anvil supercomputer, is called *cloning*. Specifically, you will have all of the files in the course GitHub repository copied into the *home* directory of your Anvil account. This provides tremendous convenience for your computing projects. The instructors will coutinuously update the GitHub contents, and will ask you to *reset* the copy in your Anvil *home* directory to the newest contents every week.
+
+To facilitate a secure way for Anvil users to clone from or reset to the course GitHub, a set of *SSH Keys* must be created in Anvil.
 
 ### a. Generate a pair of *SSH Keys*
 
  - [![Adithya Video Demo of Generating and Using SSH Key ](http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](http://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE "Video Title")
  -  SSH keys provide an authentication mechanism, a secure way, for Anvil users to access the GitHub securely without the need to transmit passwords over the network.  
- - We will take the steps following this [GitHub instruction](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#generating-a-new-ssh-key) to generate a matching pair of private and public keys.
+ - We will take the steps following this [GitHub instruction](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#generating-a-new-ssh-key) to generate a matching pair of private and public keys in Anvil.
    -  Log into Anvil OnDemand: https://ondemand.anvil.rcac.purdue.edu/
    -  Select **Clusters** then **\>\_Anvil Shell Access**
    -  Type the following behind the command prompt:
-`ssh-keygen -t ed25519 -C "your_email@purdue.edu"`
-      - Enter a file in which to save the key (`~/.ssh/id_ed25519: [Press enter]`); by pressing enter you accept the suggested file name.
+`ssh-keygen -t ed25519 -C "your_email@purdue.edu"`. In this command, `ed25519` is the algorithm used to generate the SSH keys; `your_email@purdue.edu` is the email you signed up to the GitHub account with. If you do not yet have a GitHub account, please check out the instruction in the course Brightspace to create one first.
+      - Enter a file in which to save the key (`~/.ssh/id_ed25519: [Press enter]`); by pressing enter you accept the default file name `id_ed25519`.
       - Enter a passphrase and remember this passphrase.
 
 
 ### b. Adding the public *SSH Key* to your GitHub account
 
  - The video above also shows how to do this step.
- - The SSH Key comes in a pair, `id_ed25519` and `id_ed25519.pub`, both were generated in step a. and stored in `~/.ssh`.
+ - In the previous step a., a pair of *SSH Keys* were generated,`id_ed25519` and `id_ed25519.pub`, and stored in `~/.ssh`. To see them, type `ls ~/.ssh`.
  - We will essentially follow this [GitHub instruction](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account#adding-a-new-s[…]to-your-account) so that a copy of `id_ed25519.pub` will be saved in your GitHub account setting.
      - For step 1, in **\>\_Anvil Shell Access**, type the following behind the command prompt: `cat ~/.ssh/id_ed25519.pub`. Then, copy the entire line output on the screen, follow through the rest of the steps in the instruction.
      - Once completed, make sure you exit the **\>\_Anvil Shell Access** by typing:`exit`. Then, close the browser tab of the **\>\_Anvil Shell Access** to protect your SSH Key.
