@@ -4,33 +4,33 @@ title: Getting Started
 authors: "Wen-wen Tung and Adithya Ganesh"
 ---
 
-## 1. How to *clone* this Github repository to Anvil
+## 1. How to *clone* this GitHub repository to Anvil
 
-You could have all of the files in this Github repository copied into the home directory of your Anvil account. This provides tremendous convenience for your computing. We will update the Github contents weekly, and will ask you to reset the copy in your Anvil account to the new contents.
+You could have all of the files in this GitHub repository copied into the home directory of your Anvil account. This provides tremendous convenience for your computing. We will update the GitHub contents weekly, and will ask you to reset the copy in your Anvil account to the new contents.
 
 ### a. Generate a *SSH Key*
 
  - [![Adithya Video Demo of Generating and Using SSH Key ](http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](http://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE "Video Title")
- -  We will take the steps following this [Github instruction](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#generating-a-new-ssh-key)
- -  Log into Anvil OnDemand: https://ondemand.anvil.rcac.purdue.edu/
- -  Select **Clusters** then **\>\_Anvil Shell Access**
- -  Type the following behind the command prompt:
+ -  We will take the steps following this [GitHub instruction](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#generating-a-new-ssh-key)
+   -  Log into Anvil OnDemand: https://ondemand.anvil.rcac.purdue.edu/
+   -  Select **Clusters** then **\>\_Anvil Shell Access**
+   -  Type the following behind the command prompt:
 `ssh-keygen -t ed25519 -C "your_email@purdue.edu"`
-    - Enter a file in which to save the key (`~/.ssh/id_ed25519: [Press enter]`); by pressing enter you accept the suggested file name.
-    - Enter a passphrase and remember this passphrase.
+      - Enter a file in which to save the key (`~/.ssh/id_ed25519: [Press enter]`); by pressing enter you accept the suggested file name.
+      - Enter a passphrase and remember this passphrase.
 
 
-### b. Adding the *SSH Key* to your Github account
+### b. Adding the *SSH Key* to your GitHub account
 
  - The video above also shows how to do this step.
  - The SSH Key comes in a pair, `id_ed25519` and `id_ed25519.pub`, both were generated in step a. and stored in `~/.ssh`.
- - We will essentially follow this [Github instruction](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account#adding-a-new-s[…]to-your-account) so that a copy of `id_ed25519.pub` will be saved in your Github account setting.
+ - We will essentially follow this [GitHub instruction](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account#adding-a-new-s[…]to-your-account) so that a copy of `id_ed25519.pub` will be saved in your GitHub account setting.
      - For step 1, in **\>\_Anvil Shell Access**, type the following behind the command prompt: `cat ~/.ssh/id_ed25519.pub`. Then, copy the entire line output on the screen, follow through the rest of the steps in the instruction.
      - Once completed, make sure you exit the **\>\_Anvil Shell Access** by typing:`exit`. Then, close the browser tab of the **\>\_Anvil Shell Access** to protect your SSH Key.
 
-### c. To clone the Github for the first time
+### c. To clone the GitHub for the first time
 
- -  [![Adithya Video Demo of Cloning Github Repository for the First Time](http://img.youtube.com/vi/9qNy9kjZ29Q/0.jpg)](https://mediaspace.itap.purdue.edu/media/Local+Environment+Setup/1_sgswunaa "Local Environment Setup")
+ -  [![Adithya Video Demo of Cloning GitHub Repository for the First Time](http://img.youtube.com/vi/9qNy9kjZ29Q/0.jpg)](https://mediaspace.itap.purdue.edu/media/Local+Environment+Setup/1_sgswunaa "Local Environment Setup")
  -  Make sure you are logged into Anvil OnDemand: https://ondemand.anvil.rcac.purdue.edu/
  -  Select **Clusters** then **\>\_Anvil Shell Access**
  -  Type the following behind the command prompt:
@@ -41,14 +41,14 @@ cd
 git clone git@github.com:PurdueNWP/M1_SP2023.git
 ```
 
- -  These will make sure that your copy of the Github repository will be in your home directory as
+ -  These will make sure that your copy of the GitHub repository will be in your home directory as
 ```
 ~/M1_SP2023
 ```
 
 ### d. To checkout updated repository in future weeks
 
- - Make sure you are in the your cloned Github directory:
+ - Make sure you are in the your cloned GitHub directory:
 ```
 cd ~/M1_SP2023/
 ```
@@ -109,4 +109,8 @@ module load conda-env/MetPy-py3.8.8
 Or, select Python (My MetPy Kernel) in the Jupyter Notebook
 ```
 
- 
+---
+
+## 3. Next Step
+
+Now that you are all set up with the computing environment, please read the [Project page](project.md) to complete the Computing Lab of this week.

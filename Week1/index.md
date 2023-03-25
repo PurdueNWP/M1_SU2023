@@ -12,12 +12,12 @@ You could have all of the files in this GitHub repository copied into the home d
 
  - [![Adithya Video Demo of Generating and Using SSH Key ](http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](http://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE "Video Title")
  -  We will take the steps following this [GitHub instruction](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#generating-a-new-ssh-key)
- -  Log into Anvil OnDemand: https://ondemand.anvil.rcac.purdue.edu/
- -  Select **Clusters** then **\>\_Anvil Shell Access**
- -  Type the following behind the command prompt:
+   -  Log into Anvil OnDemand: https://ondemand.anvil.rcac.purdue.edu/
+   -  Select **Clusters** then **\>\_Anvil Shell Access**
+   -  Type the following behind the command prompt:
 `ssh-keygen -t ed25519 -C "your_email@purdue.edu"`
-    - Enter a file in which to save the key (`~/.ssh/id_ed25519: [Press enter]`); by pressing enter you accept the suggested file name.
-    - Enter a passphrase and remember this passphrase.
+      - Enter a file in which to save the key (`~/.ssh/id_ed25519: [Press enter]`); by pressing enter you accept the suggested file name.
+      - Enter a passphrase and remember this passphrase.
 
 
 ### b. Adding the *SSH Key* to your GitHub account
