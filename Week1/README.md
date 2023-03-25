@@ -4,6 +4,8 @@ title: Getting Started
 authors: "Wen-wen Tung and Adithya Ganesh"
 ---
 
+In this class, we use the GitHub to store weekly computing project files for users to download to Anvil to work with. One advantage of using the GitHub is that the course instructors can update the course files efficiently while keeping track of the changes. Students will keep a copy of the course GitHub repository in their Anvil account, and will be asked to update this copy weekly throughout the course.
+
 ## 1. How to *clone* this GitHub repository to Anvil
 
 You could have all of the files in this GitHub repository copied into the home directory of your Anvil account. This provides tremendous convenience for your computing. We will update the GitHub contents weekly, and will ask you to reset the copy in your Anvil account to the new contents.
