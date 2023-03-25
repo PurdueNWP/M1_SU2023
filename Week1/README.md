@@ -8,10 +8,11 @@ authors: "Wen-wen Tung and Adithya Ganesh"
 
 You could have all of the files in this GitHub repository copied into the home directory of your Anvil account. This provides tremendous convenience for your computing. We will update the GitHub contents weekly, and will ask you to reset the copy in your Anvil account to the new contents.
 
-### a. Generate a *SSH Key*
+### a. Generate a pair of *SSH Keys*
 
  - [![Adithya Video Demo of Generating and Using SSH Key ](http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](http://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE "Video Title")
- -  We will take the steps following this [GitHub instruction](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#generating-a-new-ssh-key)
+ -  SSH keys provide an authentication mechanism, a secure way, for Anvil users to access the GitHub securely without the need to transmit passwords over the network.  
+ - We will take the steps following this [GitHub instruction](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#generating-a-new-ssh-key) to generate a matching pair of private and public keys.
    -  Log into Anvil OnDemand: https://ondemand.anvil.rcac.purdue.edu/
    -  Select **Clusters** then **\>\_Anvil Shell Access**
    -  Type the following behind the command prompt:
@@ -20,7 +21,7 @@ You could have all of the files in this GitHub repository copied into the home d
       - Enter a passphrase and remember this passphrase.
 
 
-### b. Adding the *SSH Key* to your GitHub account
+### b. Adding the public *SSH Key* to your GitHub account
 
  - The video above also shows how to do this step.
  - The SSH Key comes in a pair, `id_ed25519` and `id_ed25519.pub`, both were generated in step a. and stored in `~/.ssh`.
