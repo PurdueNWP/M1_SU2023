@@ -85,7 +85,7 @@ git reset --hard origin/master
 The script [`first_launch.sh`](first_launch.sh) automates three tasks. The end of the video above also shows how to run this script.
 
  - Install [Quarto](https://quarto.org) in your Anvil home directory, the newest scientific and technical publishing system that you will generate your project reports with. 
- - Create a directory `~/NWP` with sub-directories by the week for you to store and develop your work with.
+ - Create a directory `~/NWP1` with sub-directories by the week for you to store and develop your work with.
  - Install a Jupyter Notebook "kernel" that will load the **MetPy** Python environment built for this course.
  
 To run the script, use the following two steps. 
