@@ -26,8 +26,12 @@ cp ~/M1_SP2023/Week1/Assignment1_Getting_Started.ipynb ~/NWP1/Week1/
      -  Use **4** under Cores. 
      -  Click to select **Use Jupyter Lab instead of Jupyter Notebook**
      -  Launch the Jupyter Lab.
- -  Open the Jupyter Notebook `~/NWP1/Week1/Assignment1_Getting_Started.ipynb`, write your name as an author, then run the code chunk by chunk.
- -  Answer the last question.
+ -  Open the Jupyter Notebook `~/NWP1/Week1/Assignment1_Getting_Started.ipynb`
+     -  Write your name as a coauthor
+     -  Click on the "Python 3.9 (Default)" tab in the upper-right corner to activate a drop-down menu to select kernel. Select *Python (My MetPy Kernel). This kernel will give you access to the Python packages pre-installed by the instructors for you. You do not need to install additional packages.
+     -  Run the code chunk by chunk.
+     -  Answer the last question.
+     -  Save your changes to the Jupyter Notebook.
  -  Once done, convert the Jupyter Notebook into a pdf document using the command in the **\>\_Anvil Shell Access**
  ```
  quarto render Assignment1_Getting_Started.ipynb --execute --to pdf
