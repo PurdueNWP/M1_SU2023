@@ -29,9 +29,16 @@ To facilitate a secure way for Anvil users to clone from or reset to the course 
 
  - [![Github Cloning Part b Adding Pub Key to Github ](http://img.youtube.com/vi/TnicoRO8hSI/0.jpg)](http://www.youtube.com/watch?v=TnicoRO8hSI  "Github Cloning b Adding Pub Key to Github")
  - In the previous step a., a pair of *SSH Keys* were generated,`id_ed25519` and `id_ed25519.pub`, and stored in `~/.ssh`. To see them, type `ls ~/.ssh`.
- - We will essentially follow this [GitHub instruction](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account#adding-a-new-s[…]to-your-account) so that a copy of `id_ed25519.pub` will be saved in your GitHub account setting.
-     - For step 1, in **\>\_Anvil Shell Access**, type the following behind the command prompt: `cat ~/.ssh/id_ed25519.pub`. Then, copy the entire line output on the screen, follow through the rest of the steps in the instruction.
-     - Once completed, make sure you exit the **\>\_Anvil Shell Access** by typing:`exit`. Then, close the browser tab of the **\>\_Anvil Shell Access** to protect your SSH Key.
+ - We will essentially follow this [GitHub instruction](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account?tool=webui&platform=linux) so that a copy of `id_ed25519.pub` will be saved in your GitHub account setting.
+     - Step 1, in **\>\_Anvil Shell Access**, type the following behind the command prompt: `cat ~/.ssh/id_ed25519.pub`. Then, copy the entire line output on the screen, follow through the rest of the steps in the instruction.
+     - Step 2, log in to your Github page. In the upper-right corner of the page, click your profile photo, then click *Settings*. 
+     - Step 3, in the "Access" section of the sidebar, click *SSH and GPG keys*.
+     - Step 4, click "New SSH key"" or Add "SSH key".
+     - Step 5, in the "Title" field, fill in *Anvil*.
+     - Step 6, select the type of key as *authentication*. 
+     - Step 7, paste your public key from Step 1 into the "Key" field.
+     - Step 8, click "Add SSH key". 
+     - Once completed, make sure you exit the **\>\_Anvil Shell Access** by typing:`exit`. Then, close the browser tab of the **\>\_Anvil Shell Access** to protect your SSH Keys.
 
 ### c. To clone the GitHub for the first time
 
