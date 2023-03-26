@@ -42,7 +42,7 @@ To facilitate a secure way for Anvil users to clone from or reset to the course 
 
 ### c. To clone the GitHub for the first time
 
- -  [![Github Cloning Part c Cloning Github First time ](http://img.youtube.com/vi/OmdG-caUVkU/0.jpg)](http://www.youtube.com/watch?v=OmdG-caUVkU  "Github Cloning c Cloning Github Firsttime")
+ -  [![Github Cloning Part c Cloning Github First time ](http://img.youtube.com/vi/ttBT4_Cs5FE/0.jpg)](https://mediaspace.itap.purdue.edu/media/Github_Cloning_c_Cloning_Github_Firsttime/1_dgxfxx2s "Github Cloning c Cloning Github First time")
  -  Make sure you are logged into Anvil OnDemand: https://ondemand.anvil.rcac.purdue.edu/
  -  Select **Clusters** then **\>\_Anvil Shell Access**
  -  Type the following behind the command prompt:
