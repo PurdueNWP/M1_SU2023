@@ -14,7 +14,7 @@ To facilitate a secure way for Anvil users to clone from or reset to the course 
 
 ### a. Generate a pair of *SSH Keys*
 
- - [![Github Cloning Part a SSH Key Generation ](http://img.youtube.com/vi/349ORLRC87o/0.jpg)](http://www.youtube.com/watch?v=349ORLRC87o  "Github Cloning a SSH Key Generation")
+ - [![Github Cloning Part a SSH Key Generation ](http://img.youtube.com/vi/349ORLRC87o/0.jpg)](https://mediaspace.itap.purdue.edu/media/Github_Cloning_a_SSH_Key_Generation/1_hfommj75 "Github Cloning a SSH Key Generation")
  -  SSH keys provide an authentication mechanism, a secure way, for Anvil users to access the GitHub securely without the need to transmit passwords over the network.  
  - We will take the steps following this [GitHub instruction](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#generating-a-new-ssh-key) to generate a matching pair of private and public keys in Anvil.
    -  Log into Anvil OnDemand: https://ondemand.anvil.rcac.purdue.edu/
@@ -27,7 +27,7 @@ To facilitate a secure way for Anvil users to clone from or reset to the course 
 
 ### b. Adding the public *SSH Key* to your GitHub account
 
- - [![Github Cloning Part b Adding Pub Key to Github ](http://img.youtube.com/vi/Mqqe-eu0ipU/0.jpg)](http://www.youtube.com/watch?v=Mqqe-eu0ipU  "Github Cloning b Adding Pub Key to Github")
+ - [![Github Cloning Part b Adding Pub Key to Github ](http://img.youtube.com/vi/Mqqe-eu0ipU/0.jpg)](https://mediaspace.itap.purdue.edu/media/Github_Cloning_c_Cloning_Github_Firsttime/1_ppa8zea6 "Github Cloning b Adding Pub Key to Github")
  - In the previous step a., a pair of *SSH Keys* were generated,`id_ed25519` and `id_ed25519.pub`, and stored in `~/.ssh`. To see them, type `ls ~/.ssh`.
  - We will essentially follow this [GitHub instruction](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account?tool=webui&platform=linux) so that a copy of `id_ed25519.pub` will be saved in your GitHub account setting.
      - Step 1, in **\>\_Anvil Shell Access**, type the following behind the command prompt: `cat ~/.ssh/id_ed25519.pub`. Then, copy the entire line output on the screen, follow through the rest of the steps in the instruction.
