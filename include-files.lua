@@ -1,7 +1,7 @@
 --- include-files.lua – filter to include Markdown files
 ---
 --- Copyright: © 2019–2021 Albert Krewinkel
---- License:   MIT – see LICENSE file for details
+--- License: MIT – see LICENSE file for details
 
 -- Module pandoc.path is required and was added in version 2.12
 PANDOC_VERSION:must_be_at_least '2.12'
