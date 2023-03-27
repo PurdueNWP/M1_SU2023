@@ -33,9 +33,9 @@ module load rstudio
 module load r/4.1.0
 export INSTALL_DIR="$HOME/R/4.1.0-gcc-11.2.0-yaooqbd"
 export R_LIBS="${INSTALL_DIR}:${R_LIBS}"
-Rscript -e "install.packages('Rcpp', lib=Sys.getenv("INSTALL_DIR"), repos='https://cran.rstudio.com/')"
-Rscript -e "install.packages('RcppTOML', lib=Sys.getenv("INSTALL_DIR"), repos='https://cran.rstudio.com/')"
-Rscript -e "install.packages('reticulate', lib=Sys.getenv("INSTALL_DIR"), repos='https://cran.rstudio.com/')"
+Rscript -e "install.packages('Rcpp', lib='~/R/4.1.0-gcc-11.2.0-yaooqbd', repos='https://cran.rstudio.com/')"
+Rscript -e "install.packages('RcppTOML', lib='~/R/4.1.0-gcc-11.2.0-yaooqbd', repos='https://cran.rstudio.com/')"
+Rscript -e "install.packages('reticulate', lib='~/R/4.1.0-gcc-11.2.0-yaooqbd', repos='https://cran.rstudio.com/')"
 
 # Create directories for NWP course
 mkdir ~/NWP1
@@ -47,6 +47,7 @@ mkdir ~/NWP1/Week5
 mkdir ~/NWP1/Capstone
 
 # Load MetPy environment and set kernel for Jupyter Notebook
+module purge
 module use /anvil/projects/x-ees230003/etc/modules
 module load conda-env/MetPy-py3.8.8
 conda-env-mod kernel -p $PROJECT/apps/MetPy
