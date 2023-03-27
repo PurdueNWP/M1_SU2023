@@ -9,7 +9,11 @@ author: "Wen-wen Tung"
 In this assignment, we will work on a [Quarto](https://quarto.org/) document in RStudio to execute Python commands. Sounds intriguing? RStudio is a very good multilingual IDE (Integrated development environment). And, Quarto is an open-source document processing platform that allows users to create documents in various formats, including PDF, HTML, and Microsoft Word, using four languages: Python, R, Julia, and Observable. 
 
 The goal is to visualize the surface temperature of the Jan 2016 Blizzard. Then, we will render this Quarto file to generate a polished report. A Quarto (`qmd`) file  is available in `~/M1_SP2023/Week1`, named [`Assignment1_Getting_Started.qmd`](Assignment1_Getting_Started.qmd). 
- 
+
+Please follow this video to complete the exercise and upload your report in Word document to the Brightspace.
+
+ - [![Prof. Tung Video Demo of Assignment 1](http://img.youtube.com/vi/qKRFsKhWZVA/0.jpg)](https://mediaspace.itap.purdue.edu/media/Computing_Lab_Assignment1/1_arudt6d0 "Assignment 1 Demo")
+
 ---
 
 ## 2. Summary of activities
