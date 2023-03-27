@@ -37,7 +37,7 @@ cp ~/M1_SP2023/Week1/Assignment1_Getting_Started.qmd ~/NWP1/Week1/
      -  After the RStudio starts, use the File manager to navigate to `NWP1/Week1` in your Home directory.
      -  Double click on the file `Assignment1_Getting_Started.qmd` to open the Quarto document.
      -  Write your name as a coauthor
-     -  Run the code chunk by chunk, pay attention to the output in the *Console*.
+     -  Run the code chunk by chunk, pay attention to the output in the *Console*. **Again, say No when asked if you want to install `miniconda`.**
      -  Answer the last question.
      -  Save your changes frequently.
      -  You could preview the document by clicking the *Render* button. A HTML (web) file will be created.
