@@ -17,6 +17,26 @@ ln -s quarto-1.2.313/bin/quarto quarto
 echo "export PATH=\$PATH:~/.local/bin" >> ~/.bashrc
 source ~/.bashrc
 
+# Setup R environment
+cp -f ~/M1_SP2023/Week1/setup.Rprofile ~/.Rprofile
+# Copy a script into /.local/bin that will launch Rstudio with the pre-installed python
+cp ~/M1_SP2023/Week1/launchstudio.sh ~/.local/bin
+
+# Make the script executable
+chmod +x ~/.local/bin/launchstudio.sh
+# Create a symbolic link
+ln -s launchstudio.sh launchstudio
+
+# Install R packages to run Python
+module --force purge
+module load rstudio 
+module load r/4.1.0
+export INSTALL_DIR="$HOME/R/4.1.0-gcc-11.2.0-yaooqbd"
+export R_LIBS="${INSTALL_DIR}:${R_LIBS}"
+Rscript -e "install.packages('Rcpp', lib=Sys.getenv("INSTALL_DIR"), repos='https://cran.rstudio.com/')"
+Rscript -e "install.packages('RcppTOML', lib=Sys.getenv("INSTALL_DIR"), repos='https://cran.rstudio.com/')"
+Rscript -e "install.packages('reticulate', lib=Sys.getenv("INSTALL_DIR"), repos='https://cran.rstudio.com/')"
+
 # Create directories for NWP course
 mkdir ~/NWP1
 mkdir ~/NWP1/Week1
