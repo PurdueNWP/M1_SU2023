@@ -33,7 +33,7 @@ Please follow this video to complete the exercise and upload your report in Word
 cp ~/M1_SP2023/Week1/Assignment1_Getting_Started.qmd ~/NWP1/Week1/
 ```
  -  **Important step** To launch Rstudio with pre-installed Python packages, type in the terminal:
-     - `launchstudio` This is a [small script](launchstudio.sh) installed for you by running the [first_launch.sh](first_launch.sh) earlier. 
+     - `launchstudio` This is a [small script](launchstudio.sh) installed for you by running the [first_launch.sh](first_launch.sh) earlier. **You shouldn't need to install any additional Python packages. Say No when asked if you want to install `miniconda`.**
      -  After the RStudio starts, use the File manager to navigate to `NWP1/Week1` in your Home directory.
      -  Double click on the file `Assignment1_Getting_Started.qmd` to open the Quarto document.
      -  Write your name as a coauthor
