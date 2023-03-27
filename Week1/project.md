@@ -6,7 +6,7 @@ author: "Wen-wen Tung"
 
 ## 1. Introduction
 
-In this assignment, we will work on a Quarto document in RStudio to execute Python commands. Sounds intriguing? RStudio is a very good multilingual IDE (Integrated development environment). And, Quarto is an open-source document processing platform that allows users to create documents in various formats, including PDF, HTML, and Microsoft Word, using four languages: Python, R, Julia, and Observable. 
+In this assignment, we will work on a [Quarto](https://quarto.org/) document in RStudio to execute Python commands. Sounds intriguing? RStudio is a very good multilingual IDE (Integrated development environment). And, Quarto is an open-source document processing platform that allows users to create documents in various formats, including PDF, HTML, and Microsoft Word, using four languages: Python, R, Julia, and Observable. 
 
 The goal is to visualize the surface temperature of the Jan 2016 Blizzard. Then, we will render this Quarto file to generate a polished report. A Quarto (`qmd`) file  is available in `~/M1_SP2023/Week1`, named [`Assignment1_Getting_Started.qmd`](Assignment1_Getting_Started.qmd). 
  
@@ -15,7 +15,7 @@ The goal is to visualize the surface temperature of the Jan 2016 Blizzard. Then,
 ## 2. Summary of activities
 
  -  Make sure you are logged into [Anvil OnDemand](https://ondemand.anvil.rcac.purdue.edu/):
- -  Then, start an instance of Desktop at [Anvil OnDemand](https://ondemand.anvil.rcac.purdue.edu/) by selecting **Interactive Apps** then **Jupyter Notebook**.
+ -  Then, start an instance of Desktop at [Anvil OnDemand](https://ondemand.anvil.rcac.purdue.edu/) by selecting **Interactive Apps** then **Desktop**.
      -  Select **ees230003** under Allocation
      -  Select **shared** under Queue 
      -  Use **4** under Wall Time in Hours
@@ -29,16 +29,17 @@ The goal is to visualize the surface temperature of the Jan 2016 Blizzard. Then,
 cp ~/M1_SP2023/Week1/Assignment1_Getting_Started.qmd ~/NWP1/Week1/
 ```
  -  **Important step** To launch Rstudio with pre-installed Python packages, type in the terminal:
-     - `launchstudio.sh`
+     - `launchstudio` This is a [small script](launchstudio.sh) installed for you by running the [first_launch.sh](first_launch.sh) earlier. 
      -  After the RStudio starts, use the File manager to navigate to `NWP1/Week1` in your Home directory.
      -  Double click on the file `Assignment1_Getting_Started.qmd` to open the Quarto document.
      -  Write your name as a coauthor
-     -  Run the code chunk by chunk.
+     -  Run the code chunk by chunk, pay attention to the output in the *Console*.
      -  Answer the last question.
-     -  Save your changes.
- -  Once done, convert the Jupyter Notebook into a pdf document using the command in the **\>\_Anvil Shell Access**
+     -  Save your changes frequently.
+     -  You could preview the document by clicking the *Render* button. A HTML (web) file will be created.
+ -  Once done, convert the Quarto document into a Word document using the command in the *Terminal*.
  ```
- quarto render Assignment1_Getting_Started.ipynb --execute --to pdf
+ quarto render Assignment1_Getting_Started.qmd --to docx
  ```
- - Download the rendered pdf file to your own computer by selecting **Files** then **NWP1**, then **Week1**. Check the box in front of `Assignment1_Getting_Started.pdf`, then click **Download** from the top menu.
- - Submit the downloaded file to the Brightspace Assignment1 upload portal.
+ - Download the rendered Word file to your own computer by selecting **Files** then **NWP1**, then **Week1**. Check the box in front of `Assignment1_Getting_Started.docx`, then click **Download** from the top menu.
+ - Submit the downloaded file to the Brightspace Assignment1 upload portal. Congratulations!

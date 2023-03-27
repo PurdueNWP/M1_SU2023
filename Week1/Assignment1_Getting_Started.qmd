@@ -16,15 +16,15 @@ format:
 
 ## 1. Introduction:
 
-In this assignment, you will use Jupyter Notebook to execute python commands that load and visualize the surface temperature data of the Jan 2016 Blizzard. Then, you will use Quarto to create a polished report for submission.  
+In this assignment, you will use this Quarto document to execute python commands that load and visualize the surface temperature data of the Jan 2016 Blizzard. Then, you will create a polished webpage and a Word report for submission.  
 
-This file was originally created as a [Quarto](https://quarto.org/) Markdown document saved in the `Assignment1_Quarto` folder. The first block of the document source code is called the YAML, a human-readable data-serialization language. It is commonly used to add **metadata**, such as title and descriptions, to Markdown documents. For Quarto specifically, it can include the method to render the document, such as the Jupyter engine specified with **Jupyter: python** in the YAML.
+The first block of the document source code is called the YAML, a human-readable data-serialization language. It is commonly used to add **metadata**, such as title and descriptions, to Markdown documents. For Quarto specifically, it can include the method to render the document, such as the Jupyter engine specified with **Jupyter: python**.
 
 
-In this exercise, you will learn to perform the following tasks:
+Moreover, you will learn to perform the following tasks:
 
- - Download data from directly from NOAA Physical Sciences Laboratory, subsetting the data to the specified time and the spatial domain in the process
- - Plot the surface temperature using filled contours over a map
+ - Subsetting and download data directly from NOAA Physical Sciences Laboratory.
+ - Plot the surface temperature field using filled contours over a map
 
 The weather event under investigation is the January 2016 Blizzard, although the tasks are generic and it would be easy to change to other events. 
 
@@ -36,7 +36,9 @@ The weather event under investigation is the January 2016 Blizzard, although the
 
 ## 2. Load Python packages
 
-Make sure you have started the **Python (My MetPy Kernel)** in the upper right corner of the Jupyter Notebook. This kernel gives you access to a Python module built with necessary packages to run this exercise. You should not install packages on your own. 
+All of these packages are already installed for you. When evoking the `launchstudio` command, the necessary Python module and environment are loaded. In short, you should not need to install any of these packages. If you encounter error messages related to missing packages, please contact the instructors as soon as possible. 
+
+Click on the little advancing arrow on the top right of each code chunk to run the entire chunk. Click on the down-pointing arrow to run all chunks before the current one. To preview the document, click on the *Render* button. A HTML (web) file will be created for you to view.
 
 ```{python}
 from datetime import datetime
@@ -169,18 +171,18 @@ plt.show()
 Compare the surface temperature observation at 12UTC, Jan 23, 2016 against the prediction of precipitation (green=rain, blue=snow, orange=ice, purple=mixed type) from National Weather Service above.
 Do you think the prediction performed reasonably well in distinguishing the rain and snow apart and why? Please type your answer directly below.
 
-(Your Answer Here)
+(Type Your Answer Here)
 
 
 
 
 
 
-## 6. Create a pdf document of this Notebook
+## 6. Create a Word document 
 
-Save your changes to the file. Then, go to Anvil Ondemand, type in **\>\_Anvil Shell Access**:
+Save your changes to the file. Type in the *Terminal*:
  ```
  cd ~/NWP1/Week1
- quarto render Assignment1_Getting_Started.ipynb --execute --to pdf
+ quarto render Assignment1_Getting_Started.qmd --to docx
  ```
-A pdf file, `Assignment1_Getting_Started.pdf` will be created for you to submit to the Brightspace portal.
+A Word file, `Assignment1_Getting_Started.docx` will be created for you to submit to the Brightspace portal.
