@@ -70,6 +70,7 @@ https://psl.noaa.gov/thredds/ncss/grid/Datasets/NARR/monolevel/air.sfc.2016.nc?v
 
 Submit this request, then a dataset named `air.sfc.2016.nc.nc4` will be downloaded to your personal computer. For your convenience, the same data is stored in Anvil for you to use. We use the `Dataset` function in the python `netCDF4` package to read this file.
 
+
 ```{python}
 data = Dataset('/anvil/projects/nwp/depot/DATA/Week1/air.sfc.2016.nc.nc4', 'r')
 ```
@@ -148,7 +149,7 @@ cs2 = ax.contour(lon, lat, tmpk.to('degC'), range(-50, 50, 5),
 plt.clabel(cs2, fontsize=10, inline=1, inline_spacing=10, fmt='%i',
            rightside_up=True, use_clabeltext=True)
 
-# Filled contours - Temperature advection
+# Filled contours - Temperature
 contours = range(-25, 25, 5) 
 # Try change contours such as [-20, -15, -10, -5, -3 -1 0, 5, 10, 15, 20]
 cf = ax.contourf(lon, lat, tmpk.to('degC'), contours,
@@ -181,8 +182,9 @@ Do you think the prediction performed reasonably well in distinguishing the rain
 ## 6. Create a Word document 
 
 Save your changes to the file. Type in the *Terminal*:
- ```
- cd ~/NWP1/Week1
- quarto render Assignment1_Getting_Started.qmd --to docx
- ```
+
+```
+cd ~/NWP1/Week1
+quarto render Assignment1_Getting_Started.qmd --to docx
+```
 A Word file, `Assignment1_Getting_Started.docx` will be created for you to submit to the Brightspace portal.
