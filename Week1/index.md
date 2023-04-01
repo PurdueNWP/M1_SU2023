@@ -27,7 +27,7 @@ To facilitate a secure way for Anvil users to clone from or reset to the course 
 
 ### b. Adding the public *SSH Key* to your GitHub account
 
- - [![Github Cloning Part b Adding Pub Key to Github ](http://img.youtube.com/vi/Mqqe-eu0ipU/0.jpg)](https://mediaspace.itap.purdue.edu/media/Github_Cloning_c_Cloning_Github_Firsttime/1_ppa8zea6 "Github Cloning b Adding Pub Key to Github")
+ - [![Github Cloning Part b Adding Pub Key to Github ](http://img.youtube.com/vi/Mqqe-eu0ipU/0.jpg)](https://mediaspace.itap.purdue.edu/media/Github_Cloning_b_Adding_Pub_Key_to_Github/1_154yql3p "Github Cloning b Adding Pub Key to Github")
  - In the previous step a., a pair of *SSH Keys* were generated,`id_ed25519` and `id_ed25519.pub`, and stored in `~/.ssh`. To see them, type `ls ~/.ssh`.
  - We will essentially follow this [GitHub instruction](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account?tool=webui&platform=linux) so that a copy of `id_ed25519.pub` will be saved in your GitHub account setting.
      - Step 1, in **\>\_Anvil Shell Access**, type the following behind the command prompt: `cat ~/.ssh/id_ed25519.pub`. Then, copy the entire line output on the screen, follow through the rest of the steps in the instruction.
