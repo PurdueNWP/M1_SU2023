@@ -52,6 +52,7 @@ cd
 
 git clone git@github.com:PurdueNWP/M1_SP2023.git
 ```
+You will be asked to provide the passphrase you created in step 1.a.
 
  -  These will make sure that your copy of the GitHub repository will be in your home directory as
 ```
@@ -60,29 +61,31 @@ git clone git@github.com:PurdueNWP/M1_SP2023.git
 
 ### d. To checkout updated repository in future weeks
 
- - Make sure you are in the your cloned GitHub directory:
+ - Make sure you are in your cloned GitHub directory:
 ```
 cd ~/M1_SP2023/
 ```
- - Checkout the current master branch:
+
+ - Checkout the local *main* branch 
 ```
-git checkout master
+git checkout main
 ```
+
  - *The branching step is optional*. The purpose is to preserve your changes in your local files, if any, up to this point. You could customize the branch name.
 ```
 git branch mybranch-date
 ```
-However, we recommend the simple practice of copying codes you need from `~/M1_SP2023` to `~/NWP1` (to be set up for you in the next step). Then, make changes in `~/NWP1` for your exercise and reports. That way, you compeltely avoid the need for branching.
+However, we recommend the simple practice of copying codes you need from `~/M1_SP2023` to `~/NWP1` (to be set up for you in the next step). Then, make changes in `~/NWP1` for your exercise and reports. That way, you completely avoid the need for branching.
 
- - The following steps will reset your files in `~/M1_SP2023` to those at the **origin** at https://github.com/PurdueNWP/M1_SP2023
+ - The following steps will reset your files in `~/M1_SP2023` to those at the *origin* at https://github.com/PurdueNWP/M1_SP2023
 
 ```
 git fetch --all
 ```
-You will be asked to provide your career account and password.
+You will be asked to provide the passphrase you created in step 1.a.
 
 ```
-git reset --hard origin/master
+git reset --hard origin/main
 ```
 
 ---
