@@ -1,24 +1,30 @@
 ---
-title: Assignment 2 Introduction to WRF-ARW
-
-authors: "Andrea Orton, Gillian Ferguson, and Wen-wen Tung"
+jupyter: python3
+author: Andrea Orton, Wen-wen Tung, and YOUR NAME
+editor: 
+  markdown: 
+    wrap: 72
+format:
+  html:
+    toc: true
+    number-sections: false
+    code-fold: true
+    embed-resources: true
 ---
 
+# Assignment 2: Introduction to WRF-ARW
 
-## 1. Introduction
+## 1. Introduction:
 
+In this assignment, you will run your first WRF simulation. Use this Quarto document to place your figures and answer questions.
 
-In this assignment, you will *run* a WRF simulation of the Jan 2016 Blizzard with a model already setup for you, then document some preliminary results using a [Quarto](https://quarto.org/) document like in Week 1. The goal is to visualize and compare the surface temperature of the blizzard among the plots from the North American Regional Reanalysis, *your* WRF simulation, and the provided CAM WRF output. Then, we will render this Quarto file to generate a polished report. A Quarto (`qmd`) file  is available in `~/M1_SP2023/Week2`, named [`Assignment2_Intro_WRF.qmd`](Assignment2_Intro_WRF.qmd). 
+Moreover, you will learn to perform the following tasks:
 
-Please follow this video to run the WRF simulation, then complete the exercise and upload your report in Word document to the Brightspace. 
+ - To navigate Anvil's file system using commands (known as *common shell commands*) such as `cd` and `ls`, then copy files with `cp` in a terminal.
+ - To submit a script (known as *shell script*) that prompts the WRF simulation to run and outputs figures of variables from the simulation.
+ - Using the plotted variables from your WRF simulation to compare with those from an altered WRF simulation (CAM Phyics WRF, already provided to you) and the NARR plot from Week 1.
 
- - [![Video: Prof. Orton Video Demo of Assignment 2](../images/Assignment2.jpg)](https://mediaspace.itap.purdue.edu/media/Computing_Lab_Assignment1/1_arudt6d0 "Assignment 2 Demo")
-
----
-
-## 2. Summary of activities
-
-### Running the WRF model and gather visualization outputs
+To run the WRF model and collect output figures, please follow these steps:
 
  -  Make sure you are logged into [Anvil OnDemand](https://ondemand.anvil.rcac.purdue.edu/):
  -  Then, start an instance of Desktop at [Anvil OnDemand](https://ondemand.anvil.rcac.purdue.edu/) by selecting **Interactive Apps** then **Desktop**.
@@ -94,37 +100,74 @@ cp 2mdew_d01_f12.png ~/NWP1/Week2/
 ```
  
  -  A copy of the CAM Physics WRF output `CAM2mT_f12.png` figure is saved as `/anvil/projects/nwp/depot/DATA/Week2/CAM2mT_f12.png`, copy it into your working directory `~/NWP1/Week2/` (how?)
- 
+  
  -  A copy of the NARR surface temperature figure produced in the assignment in Week 1 is saved as `/anvil/projects/nwp/depot/DATA/Week2/NARR_Sfc_Temp_12UTC012316.png`. Copy it into your working directory `~/NWP1/Week2/` (how?)
  
+ -  Place the figures under Question 2.
 
-### Creating the Quarto report
 
- -  Return to [Anvil OnDemand](https://ondemand.anvil.rcac.purdue.edu/) to start another instance of Desktop by selecting **Interactive Apps** then **Desktop**.
-     -  Select **ees230003** under Allocation
-     -  Select **shared** under Queue 
-     -  Use **4** under Wall Time in Hours
-     -  Use **32** under Cores
-     -  Launch and wait in the Queue
-     -  Before Launching the Desktop, choose higher quality image than default if you are on fast internet, such as on campus with strong WiFi signals.
- -  Right-click on the Desktop, choose "Applications" then "Web Browser" to start a Firefox browser. There, you could read, copy, and paste from the course Brightspace and GitHub at ease.
- -  Right-click on the Desktop then choose "Open Terminal Here" to start a terminal.
- -  Copy the Week 2 Assignment Quarto file into your Week2 working directory by typing the following command in the terminal:
-```
-cp ~/M1_SP2023/Week2/Assignment2_Intro_WRF.qmd ~/NWP1/Week2/
 ```
 
- -  **Important step** To launch Rstudio with pre-installed Python packages, type in the terminal:
-     - `launchstudio`. **You shouldn't need to install any additional Python packages. Say No when asked if you want to install `miniconda`.**
-     -  After the RStudio starts, use the File manager to navigate to `NWP1/Week2` in your Home directory.
-     -  Double click on the file `Assignment2_Intro_WRF-ARW.qmd` to open the Quarto document.
-     -  Write your name as a coauthor
- -  Place all images acquired after the WRF run separately into your Quarto file and label them: Your WRF Output Figures; NARR Observation Figure; CAM Physics Figure
- -  Answer the questions.
- -  Once done, convert the Quarto document into a Word document using the command in the *Terminal*.
+## 2. Report:
+
+Please answer the following questions to complete your report. To preview the document in progress, click on the *Render* button above the document. A HTML (web) file will be created for you to view.
+
+### Question 1
+
+In RStudio, select *File* on the upper left corner of the menu bar. Then, choose *Open File*. In the dialog window, type in the blank space behind *File name* `/anvil/scratch/[x-yourusername/Week2/home/ec2-user/snow/wrfprd/namelist.input` to open the file `namelist.input`. This is the configuration file used by the WRF model to set various parameters and options for your simulation, including the domain size, time steps, initial conditions, boundary conditions, physics options, and other settings. Please examine this file and answer:
+
+a) What is the start date and time of this simulation?  
+
+b) What is the x-y domain of this simulation?
+
+c) What is the radiation parameterization schemed used in this simulation?  Describe what this radiation scheme does/how it calculates radiation.
+
+
+(Type Your Answer Here)
+
+
+
+
+
+### Question 2
+
+Figure comparisons: 
+
+To post and caption a figure, for example the NARR surface temperature plot, use this syntax:
+
+![NARR Surface Temperature at 12Z Jan 23 2016](~/NWP1/Week2/NARR_Sfc_Temp_12UTC012316.png)
+
+(a) Compare the 2m temperature from your WRF simulation output at 12Z with the CAM radiation WRF 2m temperature at 12Z. What, if any differences do you notice in the temperature distribution?  
+
+(b) Now compare your WRF 12Z 2m temperature to the NARR observations plotted in Week 1.  How did your simulation perform qualitatively?  
+
+(c) Now compare the CAM radiation WRF 12Z 2m Temperature with NARR observations.  How did this simulation perform with temperature compare to observations?  
+
+(d) Do you think your RRTMG simulation did better or worst than the CAM simulation compared with the observations?
+
+
+
+(Type Your Answer Here)
+
+
+
+
+
+
+
+
+
+
+
+
+
+## 3. Create a Word document:
+
+
+Save your changes to the file. Type in the *Terminal*:
 ```
-quarto render Assignment2_Intro_WRF-ARW.qmd --to docx 
+cd ~/NWP1/Week2
+quarto render Assignment2_Intro_WRF.qmd --to docx
 ```
 
- - Download the rendered Word file to your own computer by selecting **Files** then **NWP1**, then **Week2**. Check the box in front of `Assignment2_Intro_WRF.docx`, then click **Download** from the top menu.
- - Submit the downloaded file to the Brightspace Assignment2 upload portal. Congratulations!
+A Word file, `Assignment2_Intro_WRF.docx` will be created for you to submit to the Brightspace portal.
