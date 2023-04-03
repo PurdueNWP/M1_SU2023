@@ -1,7 +1,7 @@
 ---
 title: Assignment 2 Introduction to WRF-ARW
 
-authors: "Andrea Orton, Gillian Ferguson, and Wen-wen Tung"
+authors: "Andrea Orton, Gillian Ferguson, Lev Gorenstein, and Wen-wen Tung"
 ---
 
 
