@@ -12,7 +12,7 @@ In this assignment, you will *run* a WRF simulation of the Jan 2016 Blizzard wit
 
 Please follow this video to run the WRF simulation, then complete the exercise and upload your report in Word document to the Brightspace. 
 
- - [![Video: Prof. Orton Video Demo of Assignment 2](../images/Assignment2.jpg)](https://mediaspace.itap.purdue.edu/media/Computing_Lab_Assignment1/1_arudt6d0 "Assignment 2 Demo")
+ - [![Video: Prof. Orton Video Demo of Assignment 2](../images/Assignment2.jpg)](https://mediaspace.itap.purdue.edu/media/ProfOrtonSimulationDemo/1_3ubecsur "Assignment 2 Demo")
 
 ---
 
