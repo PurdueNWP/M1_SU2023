@@ -61,9 +61,9 @@ Wait for several minutes for all directories and files to unpack from the tarbal
 ```
 ls
 ```
-You should see 10 items listed alphabetically:
+You should see 9 items listed alphabetically:
 ```
-container-dtc-nwp  data  F12CAMPHYS  gsi_4.1.0.sif  nwp-container-met_4.1.0.sif  python_4.1.0.sif  Runwrf.sh  snow  upp_4.1.0.sif  wps_wrf_4.1.0_for_singularity.sif
+container-dtc-nwp  data  gsi_4.1.0.sif  nwp-container-met_4.1.0.sif  python_4.1.0.sif  Runwrf.sh  snow  upp_4.1.0.sif  wps_wrf_4.1.0_for_singularity.sif
 ```
 
  -  Start the WRF simulation by typing and entering the name of the running script: 
