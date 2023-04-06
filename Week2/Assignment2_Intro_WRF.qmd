@@ -106,8 +106,6 @@ cp 2mdew_d01_f12.png ~/NWP1/Week2/
  -  Place the figures under Question 2.
 
 
-```
-
 ## 2. Report:
 
 Please answer the following questions to complete your report. To preview the document in progress, click on the *Render* button above the document. A HTML (web) file will be created for you to view.
