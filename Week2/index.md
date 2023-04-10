@@ -1,7 +1,7 @@
 ---
 title: Introduction to WRF
 
-authors: "Andrea Orton, Gillian Ferguson, Adithya Ganesh, and Wen-wen Tung"
+authors: "Andrea Orton, Gillian Ferguson, Adithya Ganesh, Lev Gorenstein, and Wen-wen Tung"
 ---
 
 

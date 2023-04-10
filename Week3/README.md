@@ -1,5 +1,5 @@
 ---
-title: Introduction to WRF
+title: Introduction to Clouds and Rain in WRF
 
 authors: "Andrea Orton, Gillian Ferguson, Adithya Ganesh, Lev Gorenstein, and Wen-wen Tung"
 ---
@@ -7,7 +7,7 @@ authors: "Andrea Orton, Gillian Ferguson, Adithya Ganesh, Lev Gorenstein, and We
 
 In this class, we use the GitHub to store weekly computing project files for users to download to Anvil to work with. One advantage of using the GitHub is that the course instructors can update the course files efficiently while keeping track of the changes. Students will keep a copy of the course GitHub repository in their Anvil account, and will be asked to update this copy weekly throughout the course.
 
-## 1. Important: Please check out the Week 2 update of course GitHub
+## 1. Important: Please check out the Week 3 update of course GitHub
 
 We went through the procedure of the first cloning of the GitHub repository to Anvil in [Week 1](../Week1/index.md). Here, we demonstrate how to checkout the weekly updated repository.
 
@@ -45,5 +45,3 @@ git reset --hard origin/main
 ## 2. Next Step
 
 Now that you are all set up with the computing environment, please read the [Project page](project.md) to complete the Computing Lab of this week.
-
-
