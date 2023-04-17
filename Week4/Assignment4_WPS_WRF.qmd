@@ -1,0 +1,212 @@
+---
+jupyter: python3
+author: Andrea Orton, Wen-wen Tung, and YOUR NAME
+editor: 
+  markdown: 
+    wrap: 72
+format:
+  html:
+    toc: true
+    number-sections: false
+    code-fold: true
+    embed-resources: true
+---
+
+# Assignment 4: WPS to WRF
+
+## 1. Introduction:
+
+In this assignment, you will run your second WRF simulation. Use this Quarto document to place your figures and answer questions.
+
+Moreover, you will learn to perform the following tasks:
+
+ - To navigate Anvil's file system using commands (known as *common shell commands*) such as `cd` and `ls`, then copy files with `cp` in a terminal.
+ - To submit a script (known as *shell script*) that prompts the WRF simulation to run and outputs figures of variables from the simulation.
+ - Using the plotted variables from your WRF simulation 
+To run the WPS, WRF model and collect output figures, please follow these steps:
+
+ -  Make sure you are logged into [Anvil OnDemand](https://ondemand.anvil.rcac.purdue.edu/):
+ -  Then, start an instance of Desktop at [Anvil OnDemand](https://ondemand.anvil.rcac.purdue.edu/) by selecting **Interactive Apps** then **Desktop**.
+     -  Select **ees230003** under Allocation
+     -  Select **wholenode** under Queue 
+     -  Use **4** under Wall Time in Hours
+     -  Use **128** under Cores
+     -  Launch and wait in the Queue
+     -  Before Launching the Desktop, choose higher quality image than default if you are on fast internet, such as on campus with strong WiFi signals.
+ -  Right Click on the Desktop then choose "Open Terminal Here" to start a terminal.
+ -  In the command line, change to your `/scratch` directory by typing and entering in the terminal: 
+```
+cd /anvil/scratch/x-[yourusername]/
+```
+Swap `[yourusername]` with your Anvil account name. The `/scratch` directory has ample space, up to 100 terabytes (TB) per person, to hold large amount of data. Your personal home directory could only hold 25 Gigabytes (GB). Therefore, it is imperative to use `/scratch` for computing workflows that generate a large amount of data, such as a WRF model simulation.
+
+ -  Confirm that you are indeed in your `/scratch/x-[yourusername]` space by typing and entering:
+```
+pwd
+```
+You should see `/anvil/scratch/x-[yourusername]` in the returned output. If not, check and repeat the previous step.
+
+ -  Copy the *container* of the WRF model setup for the Jan 2016 Blizzard into your `/scratch/x-[yourusername]` space by typing and entering: 
+```
+cp /anvil/projects/nwp/depot/DATA/Week4/Week4.tar.gz /anvil/scratch/x-[yourusername]
+```
+
+ -  The *container* is saved in a *tarball*. To unpack it, type and enter:
+```
+tar -zxvf Week4.tar.gz
+```
+Wait for several minutes for all directories and files to unpack from the tarball.
+
+ -  After the model *container* is reconstructed in your `/scratch/x-[yourusername]`, change directories again, by typing and entering: 
+```
+cd Week4/home/ec2-user/
+```
+
+ -  Now you are in the directory `/scratch/x-[yourusername]/Week3/home/ec2-user/`. List its contents using the linux command `ls`:
+```
+ls
+```
+You should see 12 items:
+```
+container-dtc-nwp  data  gsi_4.1.0.sif  nwp-container-met_4.1.0.sif  python_4.1.0.sif  Runwrf.sh  snow  upp_4.1.0.sif  wps_wrf_4.1.0_for_singularity.sif WPS.sh  Real.sh  GSI.sh
+```
+ -  Start the preprocessing (WPS) by typing and entering the name of the running script for ungrib & metgrid: 
+```
+./WPS.sh
+```
+ - Start creating the boundary conditions by typing and entering the name of the running script:
+```
+./Real.sh
+```
+
+ - Start the gridpoint statistical interpolation (GSI), a process combining observations and model to refine a prediction's initial conditions, by typing and entering the name of the running script:
+```
+./GSI.sh
+``` 
+
+ -  Start the WRF simulation by typing and entering the name of the running script: 
+```
+./Runwrf.sh
+```
+
+ -  DO NOT CLOSE OUT YOUR WINDOW UNTIL YOU SEE THE MODEL HAS FINISHED RUNNING. This should take about 60 minutes.  The Python code will also post-process your WRF output and create PNG images for us to use. At the end of the run, you will see a message similar to the following two lines:
+```
+### Finished the run: Sat Apr  1 01:01:01 EDT 2023
+### Elapsed:          1651 sec.
+```
+
+ -  Once your model has finished running, change the directory into: 
+```
+cd snow/pythonprd/
+```
+
+For your information, the *absolute path* of the directory is now `/anvil/scratch/x-[yourusername]/Week4/home/ec2-user/snow/pythonprd/`.
+
+
+ -  Acquire a copy of the file `500_d01_f12.png`, `500_d01_f24.png`, `250wind_d01_f12.png`, `250wind_d01_f24.png` and save it to your Week 4 report working directory by the command: 
+```
+cp  ~/NWP1/Week4/
+```
+
+
+ -Place the figures under Question 1
+
+
+## 2. Report:
+
+```{python}
+import os
+
+# Set the working directory by swapping [yourusername] with your Access account name
+os.chdir('/home/x-[yourusername]/NWP1/Week4')
+
+# Check if the working directory has been changed
+current_directory = os.getcwd()
+print("Current working directory:", current_directory)
+```
+
+Please answer the following questions to complete your report. To preview the document in progress, click on the *Render* button above the document. A HTML (web) file will be created for you to view in the *Viewer* on the right (next to the *Help* tab).
+
+
+### Question 1
+
+In RStudio, select *File* on the upper left corner of the menu bar. Then, choose *Open File*. In the dialog window, type in the blank space behind *File name* `/anvil/scratch/[x-yourusername/Week3/home/ec2-user/snow/wrfprd/namelist.input` to open the file `namelist.input`. This is the configuration file used by the WRF model to set various parameters and options for your simulation, including the domain size, time steps, initial conditions, boundary conditions, physics options, and other settings. Please examine this file and answer:
+
+
+
+a) What is the boundary layer option set to?  What does the scheme do?
+
+
+b) What is the surface layer option set to?  What does the scheme do?
+
+
+
+
+(Type Your Answers Here)
+
+
+
+
+
+
+
+
+
+
+
+### Question 2
+
+Figure comparisons: 
+
+To post and caption a figure, for example the 500 Height, Wnd, Vorticity plot, use this syntax:
+
+![WRF Height Wnd Vorticity at 12Z Jan 23 2016](500_d01_f12.png)
+
+Compare the 500_d01_f12.png to 500_d01_f24.png. How does the trough move over this 12 hour window?  How do the vorticity values change in the 12 hours?
+
+Now look at the 250wind_d01_f12.png and 500_d01_f12.png.  Do you notice any differences in the location of the trough at 250 mb and 500 mb? 
+
+Look at the 250wind_d01_f24.png and 500_d01_f24.png.  Which level (250mb or 500mb) has the strongest winds?  Why? Where are the strongest winds located geographically?
+
+(Type Your Answer Here)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## 3. Create a Word document:
+
+
+
+
+
+Save your changes to the file. Type in the *Terminal*:
+
+```
+cd ~/NWP1/Week3
+quarto render Assignment3_CU_WRF.qmd --to docx
+```
+
+A Word file, `Assignment3_CU_WRF.docx` will be created for you to submit to the Brightspace portal.
