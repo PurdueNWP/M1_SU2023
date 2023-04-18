@@ -8,11 +8,7 @@ authors: "Andrea Orton, Gillian Ferguson, Lev Gorenstein, and Wen-wen Tung"
 In this assignment, you will *run* a complete WPS to WRF simulation of the Jan 2016 Blizzard with a model already setup for you, then document some preliminary results using a [Quarto](https://quarto.org/) document like in Week 1. The goal is to visualize the WRF pressure and wind field of the blizzard. Then, we will render this Quarto file to generate a polished report. A Quarto (`qmd`) file  is available in `~/M1_SP2023/Week4`, named [`Assignment4_WPS_WRF.qmd`](Assignment4_WPS_WRF.qmd). 
 
 
-Please follow this video (no audio) to run the WRF simulation, then complete the exercise and upload your report in Word document to the Brightspace. 
-
- - [![Video: Prof. Orton Video Demo of Assignment 3](../images/Assignment3.png
- )](https://mediaspace.itap.purdue.edu/media/Prof.+Orton+Video+Demo+of+Assignment+3/1_9ymi4h97 "Assignment 3 Demo")
-
+Please follow Prof. Orton's video in the Brightspace (Week4: Computing Lab/Prof. Orton Assignment 4 Demo) to run the WRF simulation, then complete the exercise and upload your report in Word document to the Brightspace. 
 
 ---
 
