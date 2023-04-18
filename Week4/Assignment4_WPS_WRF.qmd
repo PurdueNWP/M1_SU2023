@@ -16,7 +16,7 @@ format:
 
 ## 1. Introduction:
 
-In this assignment, you will run your second WRF simulation. Use this Quarto document to place your figures and answer questions.
+In this assignment, you will run your third WRF simulation. Use this Quarto document to place your figures and answer questions.
 
 Moreover, you will learn to perform the following tasks:
 
@@ -130,7 +130,7 @@ Please answer the following questions to complete your report. To preview the do
 
 ### Question 1
 
-In RStudio, select *File* on the upper left corner of the menu bar. Then, choose *Open File*. In the dialog window, type in the blank space behind *File name* `/anvil/scratch/[x-yourusername/Week3/home/ec2-user/snow/wrfprd/namelist.input` to open the file `namelist.input`. This is the configuration file used by the WRF model to set various parameters and options for your simulation, including the domain size, time steps, initial conditions, boundary conditions, physics options, and other settings. Please examine this file and answer:
+In RStudio, select *File* on the upper left corner of the menu bar. Then, choose *Open File*. In the dialog window, type in the blank space behind *File name* `/anvil/scratch/[x-yourusername/Week4/home/ec2-user/snow/wrfprd/namelist.input` to open the file `namelist.input`. This is the configuration file used by the WRF model to set various parameters and options for your simulation, including the domain size, time steps, initial conditions, boundary conditions, physics options, and other settings. Please examine this file and answer:
 
 
 
@@ -158,15 +158,15 @@ b) What is the surface layer option set to?  What does the scheme do?
 
 Figure comparisons: 
 
-To post and caption a figure, for example the 500 Height, Wnd, Vorticity plot, use this syntax:
+To post and caption a figure, for example the 500 Height, Wind, Vorticity plot, use this syntax:
 
-![WRF Height Wnd Vorticity at 12Z Jan 23 2016](500_d01_f12.png)
+![WRF Height Wind Vorticity at 12Z Jan 23 2016](500_d01_f12.png)
 
-Compare the 500_d01_f12.png to 500_d01_f24.png. How does the trough move over this 12 hour window?  How do the vorticity values change in the 12 hours?
+Compare the 500_d01_f12.png with 500_d01_f24.png. How does the trough move over this 12 hour window?  How do the vorticity values change in the 12 hours?
 
 Now look at the 250wind_d01_f12.png and 500_d01_f12.png.  Do you notice any differences in the location of the trough at 250 mb and 500 mb? 
 
-Look at the 250wind_d01_f24.png and 500_d01_f24.png.  Which level (250mb or 500mb) has the strongest winds?  Why? Where are the strongest winds located geographically?
+Look at the 250wind_d01_f24.png and 500_d01_f24.png.  Which level (250 mb or 500 mb) has the strongest winds?  Why? Where are the strongest winds located geographically?
 
 (Type Your Answer Here)
 
@@ -205,8 +205,8 @@ Look at the 250wind_d01_f24.png and 500_d01_f24.png.  Which level (250mb or 500m
 Save your changes to the file. Type in the *Terminal*:
 
 ```
-cd ~/NWP1/Week3
-quarto render Assignment3_CU_WRF.qmd --to docx
+cd ~/NWP1/Week4
+quarto render Assignment4_WPS_WRF.qmd --to docx
 ```
 
-A Word file, `Assignment3_CU_WRF.docx` will be created for you to submit to the Brightspace portal.
+A Word file, `Assignment4_WPS_WRF.docx` will be created for you to submit to the Brightspace portal.

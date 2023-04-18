@@ -10,8 +10,8 @@ In this assignment, you will *run* a complete WPS to WRF simulation of the Jan 2
 
 Please follow this video (no audio) to run the WRF simulation, then complete the exercise and upload your report in Word document to the Brightspace. 
 
- - [![Video: Prof. Orton Video Demo of Assignment 4](../images/Assignment3.png
- )](https://mediaspace.itap.purdue.edu/media/Prof.+Orton+Video+Demo+of+Assignment+3/1_9ymi4h97 "Assignment 4 Demo")
+ - [![Video: Prof. Orton Video Demo of Assignment 3](../images/Assignment3.png
+ )](https://mediaspace.itap.purdue.edu/media/Prof.+Orton+Video+Demo+of+Assignment+3/1_9ymi4h97 "Assignment 3 Demo")
 
 
 ---
