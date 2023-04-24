@@ -5,7 +5,7 @@ authors: "Andrea Orton, Gillian Ferguson, Lev Gorenstein, and Wen-wen Tung"
 
 ## 1. Introduction
 
-In this assignment, you will *run* a complete WPS to WRF simulation of either Hurricane Sandy or the 2012 Derecho, then document some preliminary results using a [Quarto](https://quarto.org/) document like in Week 1. The goal is for you to run the model independently and choose appropriate figures for your capstone write-up (see Brightspace for 591CaseStudy.docx for Project syllabus).  Then you will write up a formal report with your simulation.
+In this assignment, you will *run* a complete WPS to WRF simulation of either Hurricane Sandy or the 2012 Derecho. The goal is for you to run the model independently and choose appropriate figures for your capstone write-up (see Brightspace for 591CaseStudy.docx for Project syllabus).  Then you will write up a formal report with your simulation.
 
 
 
