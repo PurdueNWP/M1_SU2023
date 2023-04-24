@@ -46,14 +46,11 @@ website:
         contents:
           - Week4/index.md
           - Week4/project.md
-      - section: "Week5"
+      - section: "Week5: Capstone"
         contents:
           - Week5/index.md
           - Week5/project.md
-      - section: "Capstone"
-        contents:
-          - Capstone/index.md
-          - Capstone/project.md
+
 
 format:
   html:

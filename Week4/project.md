@@ -75,7 +75,7 @@ container-dtc-nwp  data  gsi_4.1.0.sif  nwp-container-met_4.1.0.sif  python_4.1.
 ```
  - Start the boundary conditions by typing and entering the name of the running script for real.exe:
 ```
-./Real.exe
+./Real.sh
 ```
  -  Once that is complete, Start the GSI executable:
 ```
