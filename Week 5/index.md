@@ -1,5 +1,5 @@
 ---
-title: WPS to WRF
+title: Capstone Project
 
 authors: "Andrea Orton, Gillian Ferguson, Adithya Ganesh, Lev Gorenstein, and Wen-wen Tung"
 ---
