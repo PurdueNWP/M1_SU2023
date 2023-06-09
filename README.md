@@ -1,5 +1,5 @@
 ---
-title: "Spring 2023 EAPS59100"
+title: "Summer 2023 EAPS59100"
 subtitle: "Weather Simulation and Prediction with Cloud Computing"
  
 authors: "Wen-wen Tung, Andrea Orton, Gillian Ferguson, Adithya Ganesh, and Lev Gorenstein"
@@ -11,7 +11,7 @@ authors: "Wen-wen Tung, Andrea Orton, Gillian Ferguson, Adithya Ganesh, and Lev 
 
 Welcome to **Weather Simulation and Prediction with Cloud Computing,** co-taught by Professors Andrea Orton and Wen-wen Tung.
 
-This course will take place **virtually** from **Mar 27** to **Apr 29, 2023.** The main course site is at [Purdue Brightspace](http://purdue.brightspace.com), accessible to registered students.
+This course will take place **virtually** from **Jun 12** to **Jul 9, 2023.** The main course site is at [Purdue Brightspace](http://purdue.brightspace.com), accessible to registered students.
 
 ## About
 
