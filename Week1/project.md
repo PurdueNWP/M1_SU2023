@@ -8,7 +8,7 @@ author: "Wen-wen Tung"
 
 In this assignment, we will work on a [Quarto](https://quarto.org/) document in RStudio to execute Python commands. Sounds intriguing? RStudio is a very good multilingual IDE (Integrated development environment). And, Quarto is an open-source document processing platform that allows users to create documents in various formats, including PDF, HTML, and Microsoft Word, using four languages: Python, R, Julia, and Observable. 
 
-The goal is to visualize the surface temperature of the Jan 2016 Blizzard. Then, we will render this Quarto file to generate a polished report. A Quarto (`qmd`) file  is available in `~/M1_SP2023/Week1`, named [`Assignment1_Getting_Started.qmd`](Assignment1_Getting_Started.qmd). 
+The goal is to visualize the surface temperature of the Jan 2016 Blizzard. Then, we will render this Quarto file to generate a polished report. A Quarto (`qmd`) file  is available in `~/M1_SU2023/Week1`, named [`Assignment1_Getting_Started.qmd`](Assignment1_Getting_Started.qmd). 
 
 Please follow this video to complete the exercise and upload your report in Word document to the Brightspace. (**Important: Say No when asked if you want to install `miniconda`.**)
 
@@ -30,7 +30,7 @@ Please follow this video to complete the exercise and upload your report in Word
  -  Right Click on the Desktop then choose "Open Terminal Here" to start a terminal.
  -  Copy the Week 1 Assignment Quarto file into your working directory:
 ```
-cp ~/M1_SP2023/Week1/Assignment1_Getting_Started.qmd ~/NWP1/Week1/
+cp ~/M1_SU2023/Week1/Assignment1_Getting_Started.qmd ~/NWP1/Week1/
 ```
  -  **Important step** To launch Rstudio with pre-installed Python packages, type in the terminal:
      - `launchstudio` This is a [small script](launchstudio.sh) installed for you by running the [first_launch.sh](first_launch.sh) earlier. **You shouldn't need to install any additional Python packages. Say No when asked if you want to install `miniconda`.**

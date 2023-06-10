@@ -50,20 +50,20 @@ To facilitate a secure way for Anvil users to clone from or reset to the course 
 ```
 cd
 
-git clone git@github.com:PurdueNWP/M1_SP2023.git
+git clone git@github.com:PurdueNWP/M1_SU2023.git
 ```
 You will be asked to provide the passphrase you created in step 1.a.
 
  -  These will make sure that your copy of the GitHub repository will be in your home directory as
 ```
-~/M1_SP2023
+~/M1_SU2023
 ```
 
 ### d. To checkout updated repository in future weeks
 
  - Make sure you are in your cloned GitHub directory:
 ```
-cd ~/M1_SP2023/
+cd ~/M1_SU2023/
 ```
 
  - Checkout the local *main* branch 
@@ -75,9 +75,9 @@ git checkout main
 ```
 git branch mybranch-date
 ```
-However, we recommend the simple practice of copying codes you need from `~/M1_SP2023` to `~/NWP1` (to be set up for you in the next step). Then, make changes in `~/NWP1` for your exercise and reports. That way, you completely avoid the need for branching.
+However, we recommend the simple practice of copying codes you need from `~/M1_SU2023` to `~/NWP1` (to be set up for you in the next step). Then, make changes in `~/NWP1` for your exercise and reports. That way, you completely avoid the need for branching.
 
- - The following steps will reset your files in `~/M1_SP2023` to those at the *origin* at https://github.com/PurdueNWP/M1_SP2023
+ - The following steps will reset your files in `~/M1_SU2023` to those at the *origin* at https://github.com/PurdueNWP/M1_SU2023
 
 ```
 git fetch --all
@@ -104,7 +104,7 @@ To run the script, use the following two steps.
 The first step is to make the file executable by changing its attributes:
 
 ```
-cd ~/M1_SP2023/Week1
+cd ~/M1_SU2023/Week1
 chmod +x first_launch.sh
 ```
 
