@@ -18,9 +18,9 @@ echo "export PATH=\$PATH:~/.local/bin" >> ~/.bashrc
 source ~/.bashrc
 
 # Setup R environment
-cp -f ~/M1_SP2023/Week1/setup.Rprofile ~/.Rprofile
+cp -f ~/M1_SU2023/Week1/setup.Rprofile ~/.Rprofile
 # Copy a script into /.local/bin that will launch Rstudio with the pre-installed python
-cp ~/M1_SP2023/Week1/launchstudio.sh ~/.local/bin
+cp ~/M1_SU2023/Week1/launchstudio.sh ~/.local/bin
 
 # Make the script executable
 chmod +x ~/.local/bin/launchstudio.sh
