@@ -188,3 +188,9 @@ cd ~/NWP1/Week1
 quarto render Assignment1_Getting_Started.qmd --to docx
 ```
 A Word file, `Assignment1_Getting_Started.docx` will be created for you to submit to the Brightspace portal.
+
+If you are using Jupyter Notebook `Assignment1_Getting_Started.ipynb`, then render it with the following command in the *Terminal*.
+
+```
+quarto render Assignment1_Getting_Started.ipynb --execute --to docx
+```

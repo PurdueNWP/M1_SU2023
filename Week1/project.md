@@ -42,8 +42,16 @@ cp ~/M1_SU2023/Week1/Assignment1_Getting_Started.qmd ~/NWP1/Week1/
      -  Save your changes frequently.
      -  You could preview the document by clicking the *Render* button. A HTML (web) file will be created.
  -  Once done, convert the Quarto document into a Word document using the command in the *Terminal*.
- ```
- quarto render Assignment1_Getting_Started.qmd --to docx
- ```
+ 
+```
+quarto render Assignment1_Getting_Started.qmd --to docx
+```
+ 
+If you are using Jupyter Notebook `Assignment1_Getting_Started.ipynb`, then render it with the following command in the *Terminal*.
+
+```
+quarto render Assignment1_Getting_Started.ipynb --execute --to docx
+```
+ 
  - Download the rendered Word file to your own computer by selecting **Files** then **NWP1**, then **Week1**. Check the box in front of `Assignment1_Getting_Started.docx`, then click **Download** from the top menu.
  - Submit the downloaded file to the Brightspace Assignment1 upload portal. Congratulations!

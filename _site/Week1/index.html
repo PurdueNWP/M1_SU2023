@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.1.251">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Spring 2023 EAPS59100 - Getting Started</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../Week1/project.html" rel="next">
+<link href="../index.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-sidebar docked">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title">Getting Started</h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-center sidebar-header">
+      <a href="../" class="sidebar-logo-link">
+      <img src="../Banner.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
+      <div class="sidebar-tools-main tools-wide">
+    <a href="https://purdue.brightspace.com" title="Purdue-Brightspaces website" class="sidebar-tool px-1"><i class="bi bi-globe"></i></a>
+    <a href="https://github.com/PurdueNWP/M1_SP2023" title="EAPS591 Cloud NWP repo" class="sidebar-tool px-1"><i class="bi bi-github"></i></a>
+  <a href="" class="quarto-color-scheme-toggle sidebar-tool" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div>
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">Welcome</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">Summer 2023 EAPS59100</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">Week1</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Week1/index.html" class="sidebar-item-text sidebar-link active">Getting Started</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Week1/project.html" class="sidebar-item-text sidebar-link">Assignment 1 Getting Started with Anvil and GitHub</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">Week2</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  Week2/index.md
+  </li>
+          <li class="sidebar-item">
+  Week2/project.md
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">Week3</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  Week3/index.md
+  </li>
+          <li class="sidebar-item">
+  Week3/project.md
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true">Week4</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  Week4/index.md
+  </li>
+          <li class="sidebar-item">
+  Week4/project.md
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="true">Week5: Capstone</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  Week5/index.md
+  </li>
+          <li class="sidebar-item">
+  Week5/project.md
+  </li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#how-to-clone-this-github-repository-to-anvil" id="toc-how-to-clone-this-github-repository-to-anvil" class="nav-link active" data-scroll-target="#how-to-clone-this-github-repository-to-anvil">1. How to <em>clone</em> this GitHub repository to Anvil</a>
+  <ul class="collapse">
+  <li><a href="#a.-generate-a-pair-of-ssh-keys" id="toc-a.-generate-a-pair-of-ssh-keys" class="nav-link" data-scroll-target="#a.-generate-a-pair-of-ssh-keys">a. Generate a pair of <em>SSH Keys</em></a></li>
+  <li><a href="#b.-adding-the-public-ssh-key-to-your-github-account" id="toc-b.-adding-the-public-ssh-key-to-your-github-account" class="nav-link" data-scroll-target="#b.-adding-the-public-ssh-key-to-your-github-account">b. Adding the public <em>SSH Key</em> to your GitHub account</a></li>
+  <li><a href="#c.-to-clone-the-github-for-the-first-time" id="toc-c.-to-clone-the-github-for-the-first-time" class="nav-link" data-scroll-target="#c.-to-clone-the-github-for-the-first-time">c.&nbsp;To clone the GitHub for the first time</a></li>
+  <li><a href="#d.-to-checkout-updated-repository-in-future-weeks" id="toc-d.-to-checkout-updated-repository-in-future-weeks" class="nav-link" data-scroll-target="#d.-to-checkout-updated-repository-in-future-weeks">d.&nbsp;To checkout updated repository in future weeks</a></li>
+  </ul></li>
+  <li><a href="#setup-your-python-and-quarto-environments-for-the-course" id="toc-setup-your-python-and-quarto-environments-for-the-course" class="nav-link" data-scroll-target="#setup-your-python-and-quarto-environments-for-the-course">2. Setup your Python and Quarto environments for the course</a>
+  <ul class="collapse">
+  <li><a href="#a.-make-the-script-executable" id="toc-a.-make-the-script-executable" class="nav-link" data-scroll-target="#a.-make-the-script-executable">a. Make the script executable</a></li>
+  <li><a href="#b.-execute-the-script" id="toc-b.-execute-the-script" class="nav-link" data-scroll-target="#b.-execute-the-script">b. Execute the script</a></li>
+  </ul></li>
+  <li><a href="#next-step" id="toc-next-step" class="nav-link" data-scroll-target="#next-step">3. Next Step</a></li>
+  </ul>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/PurdueNWP/M1_SP2023/edit/main/Week1/index.md" class="toc-action">Edit this page</a></p><p><a href="https://github.com/PurdueNWP/M1_SP2023/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block">Getting Started</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Wen-wen Tung and Adithya Ganesh </p>
+          </div>
+  </div>
+    
+    
+  </div>
+  
+
+</header>
+
+<p>In this class, we use the GitHub to store weekly computing project files for users to download to Anvil to work with. One advantage of using the GitHub is that the course instructors can update the course files efficiently while keeping track of the changes. Students will keep a copy of the course GitHub repository in their Anvil account, and will be asked to update this copy weekly throughout the course.</p>
+<section id="how-to-clone-this-github-repository-to-anvil" class="level2">
+<h2 class="anchored" data-anchor-id="how-to-clone-this-github-repository-to-anvil">1. How to <em>clone</em> this GitHub repository to Anvil</h2>
+<p>The process of copying all of the files in a GitHub repository to a user’s computer, in our case the Anvil supercomputer, is called <em>cloning</em>. Specifically, you will have all of the files in the course GitHub repository copied into the <em>home</em> directory of your Anvil account. This provides tremendous convenience for your computing projects. The instructors will coutinuously update the GitHub contents, and will ask you to <em>reset</em> the copy in your Anvil <em>home</em> directory to the newest contents every week.</p>
+<p>To facilitate a secure way for Anvil users to clone from or reset to the course GitHub, a set of <em>SSH Keys</em> must be created in Anvil.</p>
+<section id="a.-generate-a-pair-of-ssh-keys" class="level3">
+<h3 class="anchored" data-anchor-id="a.-generate-a-pair-of-ssh-keys">a. Generate a pair of <em>SSH Keys</em></h3>
+<ul>
+<li><a href="https://youtu.be/ooniD8zAazQ" title="Github Cloning a SSH Key Generation"><img src="http://img.youtube.com/vi/ooniD8zAazQ/0.jpg" class="img-fluid" alt="Github Cloning Part a SSH Key Generation"></a></li>
+<li>SSH keys provide an authentication mechanism, a secure way, for Anvil users to access the GitHub securely without the need to transmit passwords over the network.<br>
+</li>
+<li>We will take the steps following this <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#generating-a-new-ssh-key">GitHub instruction</a> to generate a matching pair of private and public keys in Anvil.
+<ul>
+<li>Log into Anvil OnDemand: https://ondemand.anvil.rcac.purdue.edu/</li>
+<li>Select <strong>Clusters</strong> then <strong>&gt;_Anvil Shell Access</strong></li>
+<li>Type the following behind the command prompt: <code>ssh-keygen -t ed25519 -C "your_email@purdue.edu"</code>. In this command, <code>ed25519</code> is the algorithm used to generate the SSH keys; <code>your_email@purdue.edu</code> is the email you signed up to the GitHub account with. If you do not yet have a GitHub account, please check out the instruction in the course Brightspace to create one first.
+<ul>
+<li>Enter a file in which to save the key (<code>~/.ssh/id_ed25519: [Press enter]</code>); by pressing enter you accept the default file name <code>id_ed25519</code>.</li>
+<li>Enter a passphrase and remember this passphrase.</li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="b.-adding-the-public-ssh-key-to-your-github-account" class="level3">
+<h3 class="anchored" data-anchor-id="b.-adding-the-public-ssh-key-to-your-github-account">b. Adding the public <em>SSH Key</em> to your GitHub account</h3>
+<ul>
+<li><a href="https://youtu.be/JgLO1iOkXLI" title="Github Cloning b Adding Pub Key to Github"><img src="http://img.youtube.com/vi/JgLO1iOkXLI/0.jpg" class="img-fluid" alt="Github Cloning Part b Adding Pub Key to Github"></a></li>
+<li>In the previous step a., a pair of <em>SSH Keys</em> were generated,<code>id_ed25519</code> and <code>id_ed25519.pub</code>, and stored in <code>~/.ssh</code>. To see them, type <code>ls ~/.ssh</code>.</li>
+<li>We will essentially follow this <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account?tool=webui&amp;platform=linux">GitHub instruction</a> so that a copy of <code>id_ed25519.pub</code> will be saved in your GitHub account setting.
+<ul>
+<li>Step 1, in <strong>&gt;_Anvil Shell Access</strong>, type the following behind the command prompt: <code>cat ~/.ssh/id_ed25519.pub</code>. Then, copy the entire line output on the screen, follow through the rest of the steps in the instruction.</li>
+<li>Step 2, log in to your Github page. In the upper-right corner of the page, click your profile photo, then click <em>Settings</em>.</li>
+<li>Step 3, in the “Access” section of the sidebar, click <em>SSH and GPG keys</em>.</li>
+<li>Step 4, click “New SSH key”” or Add “SSH key”.</li>
+<li>Step 5, in the “Title” field, fill in <em>Anvil</em>.</li>
+<li>Step 6, select the type of key as <em>authentication</em>.</li>
+<li>Step 7, paste your public key from Step 1 into the “Key” field.</li>
+<li>Step 8, click “Add SSH key”.</li>
+<li>Once completed, make sure you exit the <strong>&gt;_Anvil Shell Access</strong> by typing:<code>exit</code>. Then, close the browser tab of the <strong>&gt;_Anvil Shell Access</strong> to protect your SSH Keys.</li>
+</ul></li>
+</ul>
+</section>
+<section id="c.-to-clone-the-github-for-the-first-time" class="level3">
+<h3 class="anchored" data-anchor-id="c.-to-clone-the-github-for-the-first-time">c.&nbsp;To clone the GitHub for the first time</h3>
+<ul>
+<li><a href="https://mediaspace.itap.purdue.edu/media/Github_Cloning_c_Cloning_Github_Firsttime/1_dgxfxx2s" title="Github Cloning c Cloning Github First time"><img src="http://img.youtube.com/vi/ttBT4_Cs5FE/0.jpg" class="img-fluid" alt="Github Cloning Part c Cloning Github First time"></a></li>
+<li>Make sure you are logged into Anvil OnDemand: https://ondemand.anvil.rcac.purdue.edu/</li>
+<li>Select <strong>Clusters</strong> then <strong>&gt;_Anvil Shell Access</strong></li>
+<li>Type the following behind the command prompt:</li>
+</ul>
+<pre><code>cd
+
+git clone git@github.com:PurdueNWP/M1_SU2023.git</code></pre>
+<p>You will be asked to provide the passphrase you created in step 1.a.</p>
+<ul>
+<li>These will make sure that your copy of the GitHub repository will be in your home directory as</li>
+</ul>
+<pre><code>~/M1_SU2023</code></pre>
+</section>
+<section id="d.-to-checkout-updated-repository-in-future-weeks" class="level3">
+<h3 class="anchored" data-anchor-id="d.-to-checkout-updated-repository-in-future-weeks">d.&nbsp;To checkout updated repository in future weeks</h3>
+<ul>
+<li>Make sure you are in your cloned GitHub directory:</li>
+</ul>
+<pre><code>cd ~/M1_SU2023/</code></pre>
+<ul>
+<li>Checkout the local <em>main</em> branch</li>
+</ul>
+<pre><code>git checkout main</code></pre>
+<ul>
+<li><em>The branching step is optional</em>. The purpose is to preserve your changes in your local files, if any, up to this point. You could customize the branch name.</li>
+</ul>
+<pre><code>git branch mybranch-date</code></pre>
+<p>However, we recommend the simple practice of copying codes you need from <code>~/M1_SU2023</code> to <code>~/NWP1</code> (to be set up for you in the next step). Then, make changes in <code>~/NWP1</code> for your exercise and reports. That way, you completely avoid the need for branching.</p>
+<ul>
+<li>The following steps will reset your files in <code>~/M1_SU2023</code> to those at the <em>origin</em> at https://github.com/PurdueNWP/M1_SU2023</li>
+</ul>
+<pre><code>git fetch --all</code></pre>
+<p>You will be asked to provide the passphrase you created in step 1.a.</p>
+<pre><code>git reset --hard origin/main</code></pre>
+<hr>
+</section>
+</section>
+<section id="setup-your-python-and-quarto-environments-for-the-course" class="level2">
+<h2 class="anchored" data-anchor-id="setup-your-python-and-quarto-environments-for-the-course">2. Setup your Python and Quarto environments for the course</h2>
+<p>The script <a href="first_launch.sh"><code>first_launch.sh</code></a> automates three tasks. The end of the video above also shows how to run this script.</p>
+<ul>
+<li>Install <a href="https://quarto.org">Quarto</a> in your Anvil home directory, the newest scientific and technical publishing system that you will generate your project reports with.</li>
+<li>Create a directory <code>~/NWP1</code> with sub-directories by the week for you to store and develop your work with.</li>
+<li>Install a Jupyter Notebook “kernel” that will load the <strong>MetPy</strong> Python environment built for this course.</li>
+</ul>
+<p>To run the script, use the following two steps.</p>
+<section id="a.-make-the-script-executable" class="level3">
+<h3 class="anchored" data-anchor-id="a.-make-the-script-executable">a. Make the script executable</h3>
+<p>The first step is to make the file executable by changing its attributes:</p>
+<pre><code>cd ~/M1_SU2023/Week1
+chmod +x first_launch.sh</code></pre>
+</section>
+<section id="b.-execute-the-script" class="level3">
+<h3 class="anchored" data-anchor-id="b.-execute-the-script">b. Execute the script</h3>
+<pre><code>./first_launch.sh</code></pre>
+<p>There will be a short run of screen output, followed by the messages:</p>
+<pre><code>Quarto CLI installed successfully!
+To Use the Python MetPy environment in the future, type the following commands:
+module use /anvil/projects/x-ees230003/etc/modules
+module load conda-env/MetPy-py3.8.8
+Or, select Python (My MetPy Kernel) in the Jupyter Notebook</code></pre>
+<hr>
+</section>
+</section>
+<section id="next-step" class="level2">
+<h2 class="anchored" data-anchor-id="next-step">3. Next Step</h2>
+<p>Now that you are all set up with the computing environment, please read the <a href="../Week1/project.html">Project page</a> to complete the Computing Lab of this week.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } 
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../index.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Summer 2023 EAPS59100</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../Week1/project.html" class="pagination-link">
+        <span class="nav-page-text">Assignment 1 Getting Started with Anvil and GitHub</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+      <div class="nav-footer-center">Spring 2023 EAPS59100. Weather Simulation and Prediction with Cloud Computing</div>
+  </div>
+</footer>
+
+
+
+</body></html>
