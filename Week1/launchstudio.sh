@@ -1,4 +1,6 @@
 #!/bin/bash
+# Start from a clean slate
+module purge
 
 # Set up environment modules
 module use /anvil/projects/x-ees230003/etc/modules
