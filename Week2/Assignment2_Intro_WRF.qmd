@@ -175,10 +175,16 @@ To post and caption a figure, for example the NARR surface temperature plot, use
 ## 3. Create a Word document:
 
 
-Save your changes to the file. Type in the *Terminal*:
+Save your changes to the file. Type in the *Terminal* if using RStudio:
 ```
 cd ~/NWP1/Week2
 quarto render Assignment2_Intro_WRF.qmd --to docx
+```
+
+If using Jupyter notebook, type in the *Terminal*:
+```
+cd ~/NWP1/Week2
+quarto render Assignment2_Intro_WRF.ipynb --execute --to docx
 ```
 
 A Word file, `Assignment2_Intro_WRF.docx` will be created for you to submit to the Brightspace portal.

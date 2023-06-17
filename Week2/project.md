@@ -8,9 +8,9 @@ authors: "Andrea Orton, Gillian Ferguson, Lev Gorenstein, and Wen-wen Tung"
 ## 1. Introduction
 
 
-In this assignment, you will *run* a WRF simulation of the Jan 2016 Blizzard with a model already setup for you, then document some preliminary results using a [Quarto](https://quarto.org/) document like in Week 1. The goal is to visualize and compare the surface temperature of the blizzard among the plots from the North American Regional Reanalysis, *your* WRF simulation, and the provided CAM WRF output. Then, we will render this Quarto file to generate a polished report. A Quarto (`qmd`) file  is available in `~/M1_SP2023/Week2`, named [`Assignment2_Intro_WRF.qmd`](Assignment2_Intro_WRF.qmd). 
+In this assignment, you will *run* a WRF simulation of the Jan 2016 Blizzard with a model already setup for you, then document some preliminary results using a [Quarto](https://quarto.org/) document like in Week 1. The goal is to visualize and compare the surface temperature of the blizzard among the plots from the North American Regional Reanalysis, *your* WRF simulation, and the provided CAM WRF output. Then, we will render this Quarto file to generate a polished report. A Quarto (`qmd`) file  is available in `~/M1_SU2023/Week2`, named [`Assignment2_Intro_WRF.qmd`](Assignment2_Intro_WRF.qmd). 
 
-In addition, a Jupyter Notebook (`ipynb`) file is also provided for you to use with Anvil's Jupyter Lab. This file was created with the command:
+In addition, a Jupyter notebook (`ipynb`) file is also provided for you to use with Anvil's Jupyter Lab. This file was created with the command:
 ```
 quarto convert Assignment2_Intro_WRF.qmd
 ```
@@ -120,7 +120,7 @@ You could use either Method 1 or Method 2 below.
  -  Right-click on the Desktop then choose "Open Terminal Here" to start a terminal.
  -  Copy the Week 2 Assignment Quarto file into your Week2 working directory by typing the following command in the terminal:
 ```
-cp ~/M1_SP2023/Week2/Assignment2_Intro_WRF.qmd ~/NWP1/Week2/
+cp ~/M1_SU2023/Week2/Assignment2_Intro_WRF.qmd ~/NWP1/Week2/
 ```
 
  -  **Important step** To launch Rstudio with pre-installed Python packages, type in the terminal:
@@ -152,11 +152,12 @@ quarto render Assignment2_Intro_WRF.qmd --to docx
  -  In the Jupyter Lab, Choose **File**, then **New** and select **Terminal** in the drop-down menu.
  -  Copy the Week 2 Assignment Jupyter Notebook file into your Week2 working directory by typing the following command in the terminal:
 ```
-cp ~/M1_SP2023/Week2/Assignment2_Intro_WRF.ipynb ~/NWP1/Week2/
+cp ~/M1_SU2023/Week2/Assignment2_Intro_WRF.ipynb ~/NWP1/Week2/
 ```
  -  Use the File manager to navigate to `NWP1/Week2` in your Home directory.
      -  Double click on the file `Assignment2_Intro_WRF-ARW.ipynb` to open the Jupyter notebook file.
      -  Write your name as a coauthor
+ -  Change the Kernel from **Python 3.9 (Default)** to **Python (My MetPy Kernel)**
  -  Place all images acquired after the WRF run separately into your Quarto file and label them: Your WRF Output Figures; NARR Observation Figure; CAM Physics Figure
  -  Answer the questions.
  -  Once done, convert the document into a Word document using the command in the *Terminal*.
