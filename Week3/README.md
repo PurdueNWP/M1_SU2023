@@ -9,13 +9,13 @@ In this class, we use the GitHub to store weekly computing project files for use
 
 ## 1. Important: Please check out the Week 3 update of course GitHub
 
-We went through the procedure of the first cloning of the GitHub repository to Anvil in [Week 1](../Week1/index.md). Here, we demonstrate how to checkout the weekly updated repository.
+We went through the procedure of the first cloning of the GitHub repository to Anvil in [Week 1](../Week1/index.md). Here, we demonstrate how to checkout the weekly updated repository. Note that the demo video uses the course in Spring 2023 as an example. Therefore, in time 00:38--00:48 of the video, `M1_SP2023` was used. Please substitute the string to reflect the current semester, `M1_SU2023`. 
 
-  - [![Github Cloning Part d Checking-out Updated Repository](http://img.youtube.com/vi/1Zxx9PF9LJ0/0.jpg)](https://mediaspace.itap.purdue.edu/media/Github_Cloning_d_Checking_Out_Updated_Repository/1_t2nr0jv7 "Github_Cloning_d_Checking_Out_Updated_Repository")
+  - [![Github Cloning Part d Checking-out Updated Repository](http://img.youtube.com/vi/npTgpjaSHEo/0.jpg)](https://youtu.be/npTgpjaSHEo "Github_Cloning_d_Checking_Out_Updated_Repository")
  - In Anvil OnDemand: https://ondemand.anvil.rcac.purdue.edu/, select **Clusters** then **\>\_Anvil Shell Access**
  - Make sure you are in your cloned GitHub directory:
 ```
-cd ~/M1_SP2023/
+cd ~/M1_SU2023/
 ```
 
  - Checkout the local *main* branch 
@@ -27,9 +27,9 @@ git checkout main
 ```
 git branch mybranch-date
 ```
-However, we recommend the simple practice of copying codes you need from `~/M1_SP2023` to `~/NWP1` (set up in [Week1](../Week1/index.md)). Then, make changes in `~/NWP1` for your exercise and reports. That way, you completely avoid the need for branching.
+However, we recommend the simple practice of copying codes you need from `~/M1_SU2023` to `~/NWP1` (set up in [Week1](../Week1/index.md)). Then, make changes in `~/NWP1` for your exercise and reports. That way, you completely avoid the need for branching.
 
- - The following steps will reset your files in `~/M1_SP2023` to those at the *origin* at https://github.com/PurdueNWP/M1_SP2023
+ - The following steps will reset your files in `~/M1_SU2023` to those at the *origin* at https://github.com/PurdueNWP/M1_SU2023
 
 ```
 git fetch --all
