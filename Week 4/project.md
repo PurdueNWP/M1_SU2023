@@ -109,5 +109,5 @@ A couple of notes:
 - Derecho case will be called `derecho` once you are in the `Derecho/home/ec2-user/` directory.  Derecho case has the GSI executable but Hurricane Sandy case DOES NOT.  If you choose the Derecho case you need to run the GSI executable (`./GSI.sh`) before `./Runwrf.sh`.  At this point in the module, you should know the steps of WRF so part of completing this project is you running the case to its start to end.
 
 - Writing your Capstone Project (not limited in Quarto, you can do this in Word, Google Doc, etc. of your preference).
-  - You can download the Python-generated figures from your WRF simulation to your own computer by selecting **Files** then **NWP1**, then **Week5**. Check the box in front of images you copied into this directory, then click **Download** from the top menu.
+  - You can download the Python-generated figures from your WRF simulation to your own computer by selecting **Files** then **NWP1**, then **Week4**. Check the box in front of images you copied into this directory, then click **Download** from the top menu.
   - Place the figures in your lab capstone write-up that you will write from your own personal Word document, Google doc, etc.  There is no Quarto template for this project.  Please submit your Capstone Project write up as a PDF or .docx.
