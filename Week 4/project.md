@@ -101,7 +101,7 @@ cd sandy/pythonprd/
 For your information, the *absolute path* of the directory is now `/anvil/scratch/x-[yourusername]/Sandy/home/ec2-user/sandy/pythonprd/`.
 
 ```
-cp  ~/NWP1/Week4/
+cp  -r * ~/NWP1/Week4/
 ```
 
 A couple of notes:
