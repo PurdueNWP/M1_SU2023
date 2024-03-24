@@ -90,11 +90,11 @@ git reset --hard origin/main
 
 ---
 
-## 2. Setup your Python and Quarto environments for the course
+## 2. Setup your Python environments for the course
 
 The script [`first_launch.sh`](first_launch.sh) automates three tasks. The end of the video above also shows how to run this script.
 
- - Install [Quarto](https://quarto.org) in your Anvil home directory, the newest scientific and technical publishing system that you will generate your project reports with. 
+ 
  - Create a directory `~/NWP1` with sub-directories by the week for you to store and develop your work with.
  - Install a Jupyter Notebook "kernel" that will load the **MetPy** Python environment built for this course.
  
@@ -117,7 +117,7 @@ chmod +x first_launch.sh
 There will be a short run of screen output, followed by the messages:
 
 ```
-Quarto CLI installed successfully!
+
 To Use the Python MetPy environment in the future, type the following commands:
 module use /anvil/projects/x-ees230003/etc/modules
 module load conda-env/MetPy-py3.8.8
